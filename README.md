@@ -5,7 +5,7 @@
 
 ## Enter Favors
 ___
-![ERD for Favors](http://i.imgur.com/2XCBqRP.png "Favors ERD")
+![ERD for Favors](http://i.imgur.com/uo1oixV.png "Favors ERD")
 
 ## [Wireframe Presentation Here](https://docs.google.com/presentation/d/11MZD2ljGwtRAdKnE_II0v9AMik9_nj1F-7nAe954b-E/edit?usp=sharing "Favors Google Slides Presentation")
 
