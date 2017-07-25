@@ -28,15 +28,14 @@
 }
 
 .parallax {
-  background-image: url("http://colinbeavan.com/wp-content/uploads/2015/07/PeopleHelpingPeople.jpg");
+  background-image: url("http://colinbeavan.com/wp-content/uploads/2015/07/PeopleHelpingPeople.jpg") !important;
 
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
+  background-size: cover;
 }

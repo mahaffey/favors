@@ -3,33 +3,36 @@ import { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import SigninModal from './auth/signinModal'
 import SignupModal from './auth/signupModal'
-
+import Home from './home'
 import Signout from './auth/signout'
-
-// import Feature from "./feature"
+import Footer from './nav/footer'
+import FeatureRouter from "./features/router"
 import RequireAuth from "./auth/require_auth"
-import Nav from "./nav"
+
 
 export default class App extends Component {
-
-
+    constructor(){
+        super()
+    }
 
     render () {
         return (
-            <div className="parallax">
                 <Router>
                     <div>
-                        <Route path="/" component={Nav} />
 
-                        <Route path="/signin" component={SigninModal} />
+                        <Route exact path="/" component={Home} />
+
+                        <Route path="/signin" component={() => (<div><Home/><SigninModal/></div>)} />
+
+                        <Route path="/signup" component={() => (<div><Home/><SignupModal/></div>)} />
 
                         <Route path="/signout" component={RequireAuth(Signout)} />
 
-                        <Route path="/signup" component={SignupModal} />
-                        {/*<Route path='/feature' component={RequireAuth(Feature)} />*/}
+                        <Route path='/favors' component={RequireAuth(FeatureRouter)} />
+
+                        <Footer/>
                     </div>
                 </Router>
-            </div>
         )
     }
 }

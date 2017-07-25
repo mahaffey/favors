@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import { Menu } from "semantic-ui-react"
+import { Menu, Button } from "semantic-ui-react"
 import { Link } from "react-router-dom"
 
-class Header extends Component {
+class Nav extends Component {
 
     constructor(props) {
         super(props)
@@ -20,39 +20,43 @@ class Header extends Component {
         if (this.props.authenticated) {
             // show a link to sign out
             return [
+                <Link to="/favors">
+                    <Menu.Item name="favorIndex" active={activeItem === "favorIndex"} onClick={this.handleItemClick}>
+                        New Favors
+                    </Menu.Item>
+                </Link>,
+
+                <Menu.Menu position="right">
                 <Link to="/signout">
                     <Menu.Item name="signout" active={activeItem === "signout"}
                                onClick={this.handleItemClick}>
                         Sign Out
                     </Menu.Item>
-                </Link>]
+                </Link>
+                </Menu.Menu>]
 
 
         } else {
             // show a link to sign in or sign up
-            return [
-
-            <Link to="/signin">
-                <Menu.Item name="signinModal" active={activeItem === "signinModal"}
-                           onClick={this.handleItemClick}>
-                    Sign In
+            return (
+                <Menu.Item position="right">
+                    <Link to="/signin">
+                        <Button as='a' inverted active={activeItem === "signinModal"}
+                            onClick={this.handleItemClick}>Sign in</Button>
+                    </Link>
+                    <Link to="/signup">
+                        <Button as='a' inverted style={{ marginLeft: '0.5em' }} active={activeItem === "signupModal"}
+                            onClick={this.handleItemClick}>Sign Up</Button>
+                    </Link>
                 </Menu.Item>
-            </Link>,
-
-            <Link to="/signup">
-                <Menu.Item name="signupModal" active={activeItem === "signupModal"} onClick={this.handleItemClick}>
-                    Sign Up
-                </Menu.Item>
-            </Link>
-
-            ]
+            )
         }
     }
 
     render () {
         const activeItem = this.state.activeItem
         return (
-            <Menu inverted >
+            <Menu pointing inverted secondary size='large'>
                 <Menu.Header>
                     <Link to="/">
                         <Menu.Item name="home" active={activeItem === "home"} onClick={this.handleItemClick}>
@@ -72,4 +76,4 @@ function mapStateToProps (state) {
     }
 }
 
-export default connect(mapStateToProps)(Header)
+export default connect(mapStateToProps)(Nav)

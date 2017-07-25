@@ -28,7 +28,7 @@ class Signup extends Component {
     componentWillUpdate(nextProps) {
         console.log("updating signin", nextProps, this.context)
         if (nextProps.authenticated) {
-            this.context.router.history.push("/feature")
+            this.context.router.history.push("/favors")
         }
     }
 
@@ -46,6 +46,13 @@ class Signup extends Component {
                 </div>
             )
         }
+    }
+
+    handleChange = (event) => {
+        const { name, value } = event.target
+        this.setState({
+            [name]: value,
+        })
     }
 
     render () {

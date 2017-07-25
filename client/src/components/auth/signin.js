@@ -21,7 +21,7 @@ class Signin extends Component {
     componentWillUpdate(nextProps) {
         console.log("updating signin", nextProps, this.context)
         if (nextProps.authenticated) {
-            this.context.router.history.push("/feature")
+            this.context.router.history.push("/favors")
         }
     }
     handleFormSubmit (event) {
@@ -54,7 +54,6 @@ class Signin extends Component {
         // const { handleSubmit, fields: { email, password }} = this.props
         return (
             <div>
-                <Link to="/">Home</Link>
                 <Form onSubmit={this.handleFormSubmit.bind(this)}>
                     <Form.Field>
                         <input value={this.state.email} name="email" onChange={this.handleChange} placeholder="email"/>
