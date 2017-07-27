@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import * as actions from "../../actions"
-import { Link } from "react-router-dom"
+import * as actions from "../../actions/userAuthentication/index"
 import PropTypes from "prop-types"
-import { Button, Form } from 'semantic-ui-react'
+import { Button, Form, Input } from 'semantic-ui-react'
 
 class Signin extends Component {
     //add the router object to this.context to allow for redirects
@@ -19,18 +18,15 @@ class Signin extends Component {
         router: PropTypes.object
     }
     componentWillUpdate(nextProps) {
-        console.log("updating signin", nextProps, this.context)
+        // console.log("updating signin", nextProps, this.context)
         if (nextProps.authenticated) {
             this.context.router.history.push("/favors")
         }
     }
-    handleFormSubmit (event) {
+
+    handleFormSubmit = (event) => {
         // action creator dispatching credentials to validate on server
         this.props.signinUser(this.state)
-        this.setState({
-            email: '',
-            password: ''
-        })
     }
 
     handleChange = (event) => {
@@ -51,15 +47,16 @@ class Signin extends Component {
     }
 
     render () {
-        // const { handleSubmit, fields: { email, password }} = this.props
         return (
             <div>
-                <Form onSubmit={this.handleFormSubmit.bind(this)}>
+                <Form onSubmit={this.handleFormSubmit}>
                     <Form.Field>
-                        <input value={this.state.email} name="email" onChange={this.handleChange} placeholder="email"/>
+                        <Input icon='user'
+                               iconPosition='left' value={this.state.email} name="email" onChange={this.handleChange} placeholder="email"/>
                     </Form.Field>
                     <Form.Field>
-                        <input value={this.state.password} name='password' onChange={this.handleChange} type="password" placeholder="password" />
+                        <Input icon='lock'
+                               iconPosition='left' value={this.state.password} name='password' onChange={this.handleChange} type="password" placeholder="password" />
                     </Form.Field>
                     {this.renderAlert()}
                     <Button type="submit">Sign in</Button>

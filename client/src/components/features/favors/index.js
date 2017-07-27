@@ -1,9 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Segment, Button, Container, Icon, Header } from 'semantic-ui-react'
+import { Segment, Button, Container, Icon, Header, Card } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+import Favor from './favor'
 
-export default class FavorIndex extends React.Component {
+class FavorIndex extends React.Component {
     render() {
+        const Favors = this.props.favors.map((el) => {
+            return <Favor id={el.id} favor={el}/>
+        })
+
         return (
             <Segment
                 textAlign='center'
@@ -14,30 +19,30 @@ export default class FavorIndex extends React.Component {
                     <Header
                         as='h1'
                         content='Need Some Help?'
-                        style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '2.5em' }}
+                        style={{ fontSize: '3em', fontWeight: 'normal', marginBottom: 0, marginTop: '1em' }}
                     />
-                    <Header
-                        as='h2'
-                        content='Here at Favors We Got You'
-                        style={{ fontSize: '1.7em', fontWeight: 'normal' }}
-                    />
-                    <br/>
-                    <Link to="/signup">
-                        <Button primary size='huge' color="purple">
-                            Get Started Now
-                            <Icon name='right arrow' />
-                        </Button>
-                    </Link>
-                    <br/><br/>
-                    <Icon size='huge' name="chevron down"/>
-                    <Header
-                        as='h3'
-                        content='Scroll Down to Learn More'
-                        inverted
-                        style={{ fontSize: '1.2em', fontWeight: 'normal' }}
-                    />
+                </Container>
+
+                <Container fluid>
+                    <Card.Group itemsPerRow={4}>
+                        { Favors }
+                    </Card.Group>
                 </Container>
             </Segment>
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        favors: state.favor.favors
+    }
+}
+
+// const mapDispatchToProps = (dispatch) => {
+//     return bindActionCreators({
+//         addFavor: addFavor
+//     }, dispatch)
+// }
+
+export default connect(mapStateToProps, null)(FavorIndex)

@@ -13,9 +13,10 @@ const localLogin = new LocalStrategy(localOptions, function (email, password, do
   User.findOne({ email: email }, function (err, user) {
     if (err) { return done(err) }
     if (!user) { return done(null, false) }
-
+    console.log('find user', user)
     // compare passwords - is `password` equal to user.password?
-    user.comparePassword(password, function (err, isMatch) {
+    return user.comparePassword(password, function (err, isMatch) {
+      console.log('comparepass', user)
       if (err) { return done(err) }
       if (!isMatch) { return done(null, false) }
 
@@ -39,9 +40,9 @@ const jwtLogin = new JwtStrategy(jwtOptions, function (payload, done) {
     if (err) { return done(err, false) }
 
     if (user) {
-      done(null, user)
+      return done(null, user)
     } else {
-      done(null, false)
+      return done(null, false)
     }
   })
 })

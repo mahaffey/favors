@@ -13,7 +13,6 @@ class FixedNav extends Component {
         }
     }
 
-
     handleItemClick = (e, { name }) => this.setState({ activeItem: name})
 
     renderLinks (activeItem) {
@@ -21,8 +20,20 @@ class FixedNav extends Component {
             // show a link to sign out
             return [
                 <Link to="/favors">
+                    <Menu.Item name="home" active={activeItem === "home"} onClick={this.handleItemClick}>
+                        Home
+                    </Menu.Item>
+                </Link>,
+
+                <Link to="/favors">
                     <Menu.Item name="favorIndex" active={activeItem === "favorIndex"} onClick={this.handleItemClick}>
-                        New Favors
+                        Current Favors
+                    </Menu.Item>
+                </Link>,
+
+                <Link to="/favors/new">
+                    <Menu.Item name="favorInput" active={activeItem === "favorInput"} onClick={this.handleItemClick}>
+                        New Favor
                     </Menu.Item>
                 </Link>,
 
@@ -38,18 +49,24 @@ class FixedNav extends Component {
 
         } else {
             // show a link to sign in or sign up
-            return (
-                <Menu.Menu position="right">
-                    <Link to="/signin">
-                        <Button as='a' active={activeItem === "signinModal"}
-                                onClick={this.handleItemClick}>Sign in</Button>
-                    </Link>
-                    <Link to="/signup">
-                        <Button as='a' style={{ marginLeft: '0.5em' }} primary active={activeItem === "signupModal"}
-                                onClick={this.handleItemClick}>Sign Up</Button>
-                    </Link>
-                </Menu.Menu>
-            )
+            return [
+                    <Link to="/index">
+                        <Menu.Item name="home" active={activeItem === "home"} onClick={this.handleItemClick}>
+                            Home
+                        </Menu.Item>
+                    </Link>,
+
+                    <Menu.Menu position="right">
+                        <Link to="/index/signin">
+                            <Button as='a' active={activeItem === "signinModal"}
+                                    onClick={this.handleItemClick}>Sign in</Button>
+                        </Link>
+                        <Link to="/index/signup">
+                            <Button as='a' style={{ marginLeft: '0.5em' }} primary active={activeItem === "signupModal"}
+                                    onClick={this.handleItemClick}>Sign Up</Button>
+                        </Link>
+                    </Menu.Menu>
+            ]
         }
     }
 
@@ -58,11 +75,6 @@ class FixedNav extends Component {
         return (
             <Menu fixed="top" size='large'>
                 <Container>
-                    <Link to="/">
-                        <Menu.Item name="home" active={activeItem === "home"} onClick={this.handleItemClick}>
-                            Home
-                        </Menu.Item>
-                    </Link>
                     {this.renderLinks(activeItem)}
                 </Container>
             </Menu>

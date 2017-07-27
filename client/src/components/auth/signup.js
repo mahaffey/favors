@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import * as actions from "../../actions"
-import { Link } from "react-router-dom"
+import * as actions from "../../actions/userAuthentication/index"
 import PropTypes from "prop-types"
-import { Button, Form } from 'semantic-ui-react'
+import { Button, Form, Input } from 'semantic-ui-react'
 
 class Signup extends Component {
 
@@ -26,15 +25,16 @@ class Signup extends Component {
     }
 
     componentWillUpdate(nextProps) {
-        console.log("updating signin", nextProps, this.context)
+        console.log("updating signup", nextProps, this.context)
         if (nextProps.authenticated) {
             this.context.router.history.push("/favors")
         }
     }
 
-    handleFormSubmit (formProps) {
+    handleFormSubmit () {
         // Call action creator to sign up the user
         // this.props.signupUser(formProps)
+
         this.props.signupUser(this.state)
     }
 
@@ -62,27 +62,33 @@ class Signup extends Component {
         return (
             <Form onSubmit={this.handleFormSubmit.bind(this)}>
                 <Form.Field>
-                    <input value={this.state.email} name="email" onChange={this.handleChange} placeholder="Email"/>
+                    <Input icon='user'
+                           iconPosition='left' value={this.state.email} name="email" onChange={this.handleChange} placeholder="Email"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <input value={this.state.password} name="password" type="password" onChange={this.handleChange} placeholder="Password"/>
+                    <Input icon='lock'
+                           iconPosition='left' value={this.state.password} name="password" type="password" onChange={this.handleChange} placeholder="Password"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <input value={this.state.passwordConfirm} name="passwordConfirm" type="password" onChange={this.handleChange} placeholder="Password Confirmation"/>
+                    <Input icon='lock'
+                           iconPosition='left' value={this.state.passwordConfirm} name="passwordConfirm" type="password" onChange={this.handleChange} placeholder="Password Confirmation"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <input value={this.state.firstName} name="firstName" onChange={this.handleChange} placeholder="First Name"/>
+                    <Input icon='leaf'
+                           iconPosition='left' value={this.state.firstName} name="firstName" onChange={this.handleChange} placeholder="First Name"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <input value={this.state.lastName} name="lastName" onChange={this.handleChange} placeholder="Last Name"/>
+                    <Input icon='leaf'
+                           iconPosition='left' value={this.state.lastName} name="lastName" onChange={this.handleChange} placeholder="Last Name"/>
                 </Form.Field>
 
                 <Form.Field>
-                    <input value={this.state.zipCode} name="zipCode" onChange={this.handleChange} placeholder="Zip Code"/>
+                    <Input icon='map outline'
+                           iconPosition='left' value={this.state.zipCode} name="zipCode" onChange={this.handleChange} placeholder="Zip Code"/>
                 </Form.Field>
 
                 {this.renderAlert()}
@@ -117,7 +123,7 @@ function validate (formProps) {
 }
 
 function mapStateToProps (state) {
-    return { errorMessage: state.auth.error }
+    return { errorMessage: state.auth.error, authenticated: state.auth.authenticated }
 }
 
 export default connect(mapStateToProps, actions)(Signup)

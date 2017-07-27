@@ -15,7 +15,7 @@ exports.allFavors = function (req, res, next) {
 exports.newFavor = function (req, res, next) {
     const posted_by = req.body.posted_by
     const volunteer = ""
-    const offer = req.body.offer
+    const poster_is_offering_favor = req.body.poster_is_offering_favor
     const description = req.body.description
     const category = req.body.category
     const cost = req.body.cost
@@ -39,7 +39,7 @@ exports.newFavor = function (req, res, next) {
         const favor = new Favor({
             posted_by: existingUser,
             volunteer: volunteer,
-            offer: offer,
+            poster_is_offering_favor: poster_is_offering_favor,
             description: description,
             category: category,
             cost: cost,

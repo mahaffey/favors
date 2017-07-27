@@ -1,10 +1,12 @@
 import React from 'react'
 import { Segment, Image, Container, Header, Button, Icon, Grid, Visibility } from 'semantic-ui-react'
 import { Link } from "react-router-dom"
+import { connect } from 'react-redux'
+import * as actions from '../actions/userAuthentication/index'
 import Nav from './nav/nav'
 import NavFixed from './nav/navfixed'
 
-export default class Home extends React.Component {
+class Home extends React.Component {
     state = {}
 
     hideFixedMenu = () => this.setState({ visible: false })
@@ -12,7 +14,9 @@ export default class Home extends React.Component {
 
 
     render () {
+
         const { visible } = this.state
+
         return (
             <div>
                 { visible ? <NavFixed /> : null}
@@ -48,13 +52,14 @@ export default class Home extends React.Component {
                                 style={{ fontSize: '1.7em', fontWeight: 'normal' }}
                             />
                             <br/>
-                            <Link to="/signup">
+                            <Link to="/index/signup">
                                 <Button primary size='huge' color="purple">
                                     Get Started Now
                                     <Icon name='right arrow' />
                                 </Button>
                             </Link>
                             <br/><br/>
+
                             <Icon size='huge' name="chevron down"/>
                             <Header
                                 as='h3'
@@ -82,7 +87,6 @@ export default class Home extends React.Component {
                             <Grid.Column floated='right' width={6}>
                                 <Image
                                     bordered
-                                    rounded
                                     size='large'
                                     src='http://colinbeavan.com/wp-content/uploads/2015/07/PeopleHelpingPeople.jpg'
                                 />
@@ -90,7 +94,7 @@ export default class Home extends React.Component {
                         </Grid.Row>
                         <Grid.Row>
                             <Grid.Column textAlign='center'>
-                                <Link to="/signup">
+                                <Link to="/index/signup">
                                     <Button size='huge'>Check Us Out</Button>
                                 </Link>
                             </Grid.Column>
@@ -122,3 +126,9 @@ export default class Home extends React.Component {
             )
     }
 }
+
+function mapStateToProps (state) {
+    return {state}
+}
+
+export default connect(mapStateToProps, actions)(Home)

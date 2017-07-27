@@ -10,10 +10,10 @@ const favorSchema = new Schema({
 
     volunteer: {
         type: Schema.Types.Mixed,
-        required: true
+        required: false
     },
 
-    offer: {
+    poster_is_offering_favor: {
         type: Boolean,
         required: true
     } ,

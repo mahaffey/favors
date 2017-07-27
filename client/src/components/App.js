@@ -1,38 +1,41 @@
 import React from 'react'
 import { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import SigninModal from './auth/signinModal'
-import SignupModal from './auth/signupModal'
-import Home from './home'
+import home from './home'
+import homeRouter from './homeRouter'
 import Signout from './auth/signout'
 import Footer from './nav/footer'
 import FeatureRouter from "./features/router"
 import RequireAuth from "./auth/require_auth"
+import { connect } from "react-redux"
 
 
-export default class App extends Component {
-    constructor(){
-        super()
-    }
+class App extends Component {
 
     render () {
         return (
-                <Router>
-                    <div>
+            // I need to fix this asap
+            <Router>
+                <div>
 
-                        <Route exact path="/" component={Home} />
+                    <Route exact path="/" component={home} />
 
-                        <Route path="/signin" component={() => (<div><Home/><SigninModal/></div>)} />
+                    <Route path="/" component={homeRouter} />
 
-                        <Route path="/signup" component={() => (<div><Home/><SignupModal/></div>)} />
+                    <Route path="/signout" component={RequireAuth(Signout)} />
 
-                        <Route path="/signout" component={RequireAuth(Signout)} />
+                    <Route path="/favors" component={RequireAuth(FeatureRouter)} />
 
-                        <Route path='/favors' component={RequireAuth(FeatureRouter)} />
-
-                        <Footer/>
-                    </div>
-                </Router>
+                    <Footer/>
+                </div>
+            </Router>
         )
     }
 }
+
+// Probably unnecessary here for testing
+function mapStateToProps (state) {
+    return { authenticated: state.auth.authenticated }
+}
+
+export default connect(mapStateToProps, null)(App)

@@ -22,7 +22,7 @@ class Nav extends Component {
             return [
                 <Link to="/favors">
                     <Menu.Item name="favorIndex" active={activeItem === "favorIndex"} onClick={this.handleItemClick}>
-                        New Favors
+                        Favors
                     </Menu.Item>
                 </Link>,
 
@@ -40,11 +40,11 @@ class Nav extends Component {
             // show a link to sign in or sign up
             return (
                 <Menu.Item position="right">
-                    <Link to="/signin">
+                    <Link to="/index/signin">
                         <Button as='a' inverted active={activeItem === "signinModal"}
                             onClick={this.handleItemClick}>Sign in</Button>
                     </Link>
-                    <Link to="/signup">
+                    <Link to="/index/signup">
                         <Button as='a' inverted style={{ marginLeft: '0.5em' }} active={activeItem === "signupModal"}
                             onClick={this.handleItemClick}>Sign Up</Button>
                     </Link>
@@ -58,7 +58,7 @@ class Nav extends Component {
         return (
             <Menu pointing inverted secondary size='large'>
                 <Menu.Header>
-                    <Link to="/">
+                    <Link to="/index">
                         <Menu.Item name="home" active={activeItem === "home"} onClick={this.handleItemClick}>
                             Home
                         </Menu.Item>
