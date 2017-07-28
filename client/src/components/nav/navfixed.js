@@ -44,6 +44,7 @@ class FixedNav extends Component {
                 </Link>,
 
                 <Menu.Menu key="right" position="right">
+                    {/* need to add user show page from here*/}
                     <Menu.Item>
                         Welcome &nbsp;
                         {this.props.user.firstName &&
