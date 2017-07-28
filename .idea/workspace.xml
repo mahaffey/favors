@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25792ad-4243-45c8-9595-28b34520f673" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/nav/navfixed.js" afterPath="$PROJECT_DIR$/client/src/components/nav/navfixed.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,15 +19,25 @@
     <splitter split-orientation="horizontal" split-proportion="0.6610909">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="navfixed.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="navfixed.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/components/nav/navfixed.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="219">
+                <state relative-caret-position="-22">
                   <caret line="46" column="63" lean-forward="true" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                     <marker date="1501279836000" expanded="true" signature="2884:3497" ph="&lt;Menu.Menu/&gt;" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="230">
+                  <caret line="55" column="13" lean-forward="false" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -48,18 +58,6 @@
                 <state relative-caret-position="45">
                   <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="favorInputModal.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -270,6 +268,7 @@
         <option value="$PROJECT_DIR$/client/src/actions/favors/types.js" />
         <option value="$PROJECT_DIR$/client/src/components/features/favors/index.js" />
         <option value="$PROJECT_DIR$/client/src/components/nav/navfixed.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -798,12 +797,12 @@
       <workItem from="1500912594839" duration="37000" />
       <workItem from="1500912781766" duration="609000" />
       <workItem from="1500913399430" duration="42992000" />
-      <workItem from="1501017280964" duration="64683000" />
+      <workItem from="1501017280964" duration="64776000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108321000" />
+    <option name="totallyTimeSpent" value="108414000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -853,14 +852,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/yarn.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="6326" column="13" lean-forward="true" selection-start-line="6326" selection-start-column="13" selection-end-line="6326" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/logo.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1373,12 +1364,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/nav/navfixed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="-22">
           <caret line="46" column="63" lean-forward="true" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
             <marker date="1501279836000" expanded="true" signature="2884:3497" ph="&lt;Menu.Menu/&gt;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="55" column="13" lean-forward="false" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

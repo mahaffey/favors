@@ -53,11 +53,12 @@ ___
   * React-Redux
 * Reactive JavaScript
 * WebSocket
+* Semantic UI
 
 #### Server
-* Ruby on Rails
+* Node with Express (MERN with redux)
 * MongoDB
-* CUID
+
 
 ## Store State
 ___
