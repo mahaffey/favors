@@ -27,7 +27,7 @@ class Signup extends Component {
     componentWillUpdate(nextProps) {
         console.log("updating signup", nextProps, this.context)
         if (nextProps.authenticated) {
-            this.context.router.history.push("/favors")
+            this.context.router.history.push("/favors/all")
         }
     }
 
@@ -100,27 +100,28 @@ class Signup extends Component {
     }
 }
 
-function validate (formProps) {
-    const errors = {}
-
-    if (!formProps.email) {
-        errors.email = "Please enter an email"
-    }
-
-    if (!formProps.password) {
-        errors.password = "Please enter a password"
-    }
-
-    if (!formProps.passwordConfirm) {
-        errors.passwordConfirm = "Please enter a password confirmation"
-    }
-
-    if (formProps.password !== formProps.passwordConfirm) {
-        errors.password = "Passwords must match"
-    }
-
-    return errors
-}
+// want to implement in form validations
+// function validate (formProps) {
+//     const errors = {}
+//
+//     if (!formProps.email) {
+//         errors.email = "Please enter an email"
+//     }
+//
+//     if (!formProps.password) {
+//         errors.password = "Please enter a password"
+//     }
+//
+//     if (!formProps.passwordConfirm) {
+//         errors.passwordConfirm = "Please enter a password confirmation"
+//     }
+//
+//     if (formProps.password !== formProps.passwordConfirm) {
+//         errors.password = "Passwords must match"
+//     }
+//
+//     return errors
+// }
 
 function mapStateToProps (state) {
     return { errorMessage: state.auth.error, authenticated: state.auth.authenticated }

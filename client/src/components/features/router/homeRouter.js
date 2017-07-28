@@ -1,8 +1,8 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
-import SigninModal from './auth/signinModal'
-import SignupModal from './auth/signupModal'
-import home from './home'
+import SigninModal from '../../auth/signinModal'
+import SignupModal from '../../auth/signupModal'
+import home from '../home'
 
 const FeatureRouter = () => {
     return (

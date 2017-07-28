@@ -34,7 +34,7 @@ export default class favorInputModal extends React.Component {
                 </Modal.Content>
 
                 <Modal.Actions>
-                    <Link to='/favors'>
+                    <Link to='/favors/all'>
                         <Button color='green' onClick={this.handleClose} inverted>
                             <Icon name='window close' /> Go back
                         </Button>

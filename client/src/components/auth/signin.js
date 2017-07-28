@@ -20,7 +20,7 @@ class Signin extends Component {
     componentWillUpdate(nextProps) {
         // console.log("updating signin", nextProps, this.context)
         if (nextProps.authenticated) {
-            this.context.router.history.push("/favors")
+            this.context.router.history.push("/favors/all")
         }
     }
 

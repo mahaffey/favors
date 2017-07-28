@@ -2,36 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25792ad-4243-45c8-9595-28b34520f673" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/actions/favors/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/actions/favors/types.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favorInput.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favorShow.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/components/homeRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/reducers/favor_reducer.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/actions/index.js" afterPath="$PROJECT_DIR$/client/src/actions/userAuthentication/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/actions/types.js" afterPath="$PROJECT_DIR$/client/src/actions/userAuthentication/types.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/components/features/router/authRouter.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/components/features/router.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/components/home.js" afterPath="$PROJECT_DIR$/client/src/components/features/home.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client/src/components/homeRouter.js" afterPath="$PROJECT_DIR$/client/src/components/features/router/homeRouter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/actions/favors/index.js" afterPath="$PROJECT_DIR$/client/src/actions/favors/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/actions/favors/types.js" afterPath="$PROJECT_DIR$/client/src/actions/favors/types.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/actions/userAuthentication/index.js" afterPath="$PROJECT_DIR$/client/src/actions/userAuthentication/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/actions/userAuthentication/types.js" afterPath="$PROJECT_DIR$/client/src/actions/userAuthentication/types.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/App.js" afterPath="$PROJECT_DIR$/client/src/components/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/auth/signin.js" afterPath="$PROJECT_DIR$/client/src/components/auth/signin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/auth/signinModal.js" afterPath="$PROJECT_DIR$/client/src/components/auth/signinModal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/auth/signout.js" afterPath="$PROJECT_DIR$/client/src/components/auth/signout.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/auth/signup.js" afterPath="$PROJECT_DIR$/client/src/components/auth/signup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/auth/signupModal.js" afterPath="$PROJECT_DIR$/client/src/components/auth/signupModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/favors/favor.js" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/favors/favorInput.js" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favorInput.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/favors/index.js" afterPath="$PROJECT_DIR$/client/src/components/features/favors/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/router.js" afterPath="$PROJECT_DIR$/client/src/components/features/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/home.js" afterPath="$PROJECT_DIR$/client/src/components/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/nav/nav.js" afterPath="$PROJECT_DIR$/client/src/components/nav/nav.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/nav/navfixed.js" afterPath="$PROJECT_DIR$/client/src/components/nav/navfixed.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/index.js" afterPath="$PROJECT_DIR$/client/src/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/reducers/auth_reducer.js" afterPath="$PROJECT_DIR$/client/src/reducers/auth_reducer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/reducers/favor_reducer.js" afterPath="$PROJECT_DIR$/client/src/reducers/favor_reducer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/reducers/index.js" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controllers/authentication.js" afterPath="$PROJECT_DIR$/server/controllers/authentication.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controllers/favor.js" afterPath="$PROJECT_DIR$/server/controllers/favor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/favor.js" afterPath="$PROJECT_DIR$/server/models/favor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/models/user.js" afterPath="$PROJECT_DIR$/server/models/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/package.json" afterPath="$PROJECT_DIR$/server/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/router.js" afterPath="$PROJECT_DIR$/server/router.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/services/passport.js" afterPath="$PROJECT_DIR$/server/services/passport.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -46,15 +41,62 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.63247323">
+    <splitter split-orientation="horizontal" split-proportion="0.6610909">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/components/home.js">
+          <file leaf-file-name="navfixed.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/src/components/nav/navfixed.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="13" />
+                <state relative-caret-position="273">
+                  <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+                  <folding>
+                    <element signature="e#0#40#0" expanded="true" />
+                    <marker date="1501279561000" expanded="true" signature="2820:3433" ph="&lt;Menu.Menu/&gt;" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/server/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="favorInputModal.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="homeRouter.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/components/features/router/homeRouter.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -62,8 +104,18 @@
           <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/components/App.js">
               <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="authRouter.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/components/features/router/authRouter.js">
+              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
-                  <caret line="20" column="57" lean-forward="true" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+                  <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
@@ -71,107 +123,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="homeRouter.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/src/components/homeRouter.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="navfixed.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/components/nav/navfixed.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="740">
-                  <caret line="63" column="41" lean-forward="false" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
-                  <folding>
-                    <marker date="1501123685000" expanded="true" signature="2000:2594" ph="&lt;Menu.Menu/&gt;" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="signinModal.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/components/auth/signinModal.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="615">
-                  <caret line="40" column="63" lean-forward="false" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="signupModal.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/components/auth/signupModal.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="nav.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/components/nav/nav.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="667">
-                  <caret line="60" column="36" lean-forward="false" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="router.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/components/features/router.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="auth_reducer.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/reducers/auth_reducer.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#119#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="favor_reducer.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/reducers/favor_reducer.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="signup.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="signup.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/components/auth/signup.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1857">
-                  <caret line="125" column="84" lean-forward="false" selection-start-line="125" selection-start-column="84" selection-end-line="125" selection-end-column="84" />
+                <state relative-caret-position="156">
+                  <caret line="102" column="40" lean-forward="false" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                   </folding>
@@ -179,42 +135,108 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="favorInput.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInput.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="834">
+                  <caret line="70" column="53" lean-forward="false" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="210">
+                  <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+                  <folding>
+                    <element signature="e#0#25#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
+      </split-first>
+      <split-second>
+        <splitter split-orientation="vertical" split-proportion="0.5">
+          <split-first>
+            <leaf>
+              <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/client/src/actions/favors/index.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="90">
+                      <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="types.js" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/src/actions/favors/types.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="60">
+                      <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="favor_reducer.js" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/client/src/reducers/favor_reducer.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="210">
+                      <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+                      <folding>
+                        <element signature="e#0#112#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-second>
     </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getStat</find>
-      <find>actions</find>
-      <find>b</find>
-      <find>getState</find>
-      <find>r</find>
-      <find>rounded</find>
-      <find>autherr</find>
+      <find>getFa</find>
+      <find>getFavo</find>
+      <find>getFavor</find>
+      <find>getFavors</find>
+      <find>debugg</find>
       <find>d</find>
+      <find>de</find>
+      <find>debuggger</find>
       <find>debugger</find>
+      <find>conso</find>
+      <find>need</find>
+      <find>console.log</find>
+      <find>find</find>
+      <find>find</find>
+      <find>find us</find>
+      <find>find use</find>
+      <find>find user</find>
       <find>s</find>
       <find>si</find>
+      <find>sign</find>
       <find>signin</find>
-      <find>signinU</find>
       <find>signinUs</find>
       <find>signinUse</find>
       <find>signinUser</find>
-      <find>a</find>
-      <find>auth_error</find>
-      <find>auth_erro</find>
-      <find>auth_err</find>
-      <find>auth_er</find>
-      <find>auth_e</find>
-      <find>auth_</find>
-      <find>auth</find>
-      <find>authE</find>
-      <find>authEr</find>
-      <find>authErr</find>
-      <find>authErro</find>
-      <find>authError</find>
-      <find>link</find>
+      <find>c</find>
+      <find>component</find>
+      <find>componentw</find>
+      <find>componentwi</find>
+      <find>componentwil</find>
+      <find>componentwill</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -238,35 +260,41 @@
         <option value="$PROJECT_DIR$/client/src/components/nav.js" />
         <option value="$PROJECT_DIR$/client/src/components/nav/footer.js" />
         <option value="$PROJECT_DIR$/client/src/components/features/favors/favors.js" />
-        <option value="$PROJECT_DIR$/client/src/components/features/favors/favor.js" />
-        <option value="$PROJECT_DIR$/client/src/index.js" />
-        <option value="$PROJECT_DIR$/client/src/components/features/router.js" />
-        <option value="$PROJECT_DIR$/server/models/favor.js" />
-        <option value="$PROJECT_DIR$/server/controllers/favor.js" />
         <option value="$PROJECT_DIR$/server/package.json" />
-        <option value="$PROJECT_DIR$/client/src/actions/favors/types.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/favors/index.js" />
-        <option value="$PROJECT_DIR$/client/src/reducers/index.js" />
-        <option value="$PROJECT_DIR$/client/src/reducers/favor_reducer.js" />
-        <option value="$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js" />
-        <option value="$PROJECT_DIR$/client/src/components/features/favors/favorInput.js" />
-        <option value="$PROJECT_DIR$/client/src/components/features/favors/index.js" />
         <option value="$PROJECT_DIR$/client/src/components/auth/require_auth.js" />
-        <option value="$PROJECT_DIR$/client/src/components/auth/signup.js" />
-        <option value="$PROJECT_DIR$/client/src/reducers/auth_reducer.js" />
         <option value="$PROJECT_DIR$/server/models/user.js" />
-        <option value="$PROJECT_DIR$/server/services/passport.js" />
-        <option value="$PROJECT_DIR$/server/router.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/userAuthentication/index.js" />
-        <option value="$PROJECT_DIR$/server/controllers/authentication.js" />
-        <option value="$PROJECT_DIR$/client/src/components/auth/signin.js" />
-        <option value="$PROJECT_DIR$/client/src/components/homeRouter.js" />
         <option value="$PROJECT_DIR$/client/src/components/nav/nav.js" />
-        <option value="$PROJECT_DIR$/client/src/components/nav/navfixed.js" />
         <option value="$PROJECT_DIR$/client/src/components/home.js" />
-        <option value="$PROJECT_DIR$/client/src/components/App.js" />
         <option value="$PROJECT_DIR$/client/src/components/auth/signinModal.js" />
         <option value="$PROJECT_DIR$/client/src/components/auth/signupModal.js" />
+        <option value="$PROJECT_DIR$/client/src/components/App.js" />
+        <option value="$PROJECT_DIR$/client/src/reducers/index.js" />
+        <option value="$PROJECT_DIR$/client/src/registerServiceWorker.js" />
+        <option value="$PROJECT_DIR$/client/src/reducers/favor_reducer.js" />
+        <option value="$PROJECT_DIR$/server/models/favor.js" />
+        <option value="$PROJECT_DIR$/server/controllers/favor.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/favors/favor.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/favors/mine.js" />
+        <option value="$PROJECT_DIR$/client/src/components/homeRouter.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/userAuthentication/types.js" />
+        <option value="$PROJECT_DIR$/server/router.js" />
+        <option value="$PROJECT_DIR$/server/controllers/authentication.js" />
+        <option value="$PROJECT_DIR$/server/services/passport.js" />
+        <option value="$PROJECT_DIR$/client/src/reducers/auth_reducer.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/userAuthentication/index.js" />
+        <option value="$PROJECT_DIR$/client/src/components/auth/signin.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/favors/favorInput.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/router.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/router/router.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/router/nestedFavorRoutes.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/router/authRouter.js" />
+        <option value="$PROJECT_DIR$/client/src/index.js" />
+        <option value="$PROJECT_DIR$/client/src/components/auth/signup.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/favors/index.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/favors/types.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/favors/index.js" />
+        <option value="$PROJECT_DIR$/client/src/components/nav/navfixed.js" />
       </list>
     </option>
   </component>
@@ -295,7 +323,7 @@
     <option name="x" value="1280" />
     <option name="y" value="-258" />
     <option name="width" value="1920" />
-    <option name="height" value="1058" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -543,6 +571,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="favors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="favors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="favors" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -568,10 +626,6 @@
               <option name="myItemId" value="actions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="userAuthentication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -596,24 +650,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="favors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="favors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="favors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -641,11 +677,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/features" />
+      <recent name="$PROJECT_DIR$/client/src/components/features/router" />
       <recent name="$PROJECT_DIR$/client/src/actions/userAuthentication" />
       <recent name="$PROJECT_DIR$/client/src/components/nav" />
       <recent name="$PROJECT_DIR$/client/src" />
-      <recent name="$PROJECT_DIR$/client/src/actions" />
-      <recent name="$PROJECT_DIR$/client/public/css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/components/features/favors" />
@@ -741,7 +777,7 @@
     <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
       <option name="cucumberJsArguments" value="" />
       <option name="executablePath" />
-      <option name="filePath" value="$PROJECT_DIR$/client/src/components/features/favors" />
+      <option name="filePath" value="$PROJECT_DIR$/client/src/components/features/router" />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -787,31 +823,41 @@
       <workItem from="1500912594839" duration="37000" />
       <workItem from="1500912781766" duration="609000" />
       <workItem from="1500913399430" duration="42992000" />
-      <workItem from="1501017280964" duration="33322000" />
+      <workItem from="1501017280964" duration="64484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76960000" />
+    <option name="totallyTimeSpent" value="108122000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="-258" width="1920" height="1058" extended-state="6" />
+    <frame x="1280" y="-258" width="1920" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16324382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19325961" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32848233" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -827,29 +873,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/tasks/README.md" />
-    <entry file="file://$PROJECT_DIR$/client/src/gulpfile.js" />
-    <entry file="file://$PROJECT_DIR$/client/src/registerServiceWorker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/yarn.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="893">
@@ -884,6 +912,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -908,14 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -951,82 +972,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/models/favor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/favor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="62" lean-forward="false" selection-start-line="41" selection-start-column="62" selection-end-line="41" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/semantic/src/themes/material/assets/fonts/icons.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="108" column="142" lean-forward="false" selection-start-line="108" selection-start-column="142" selection-end-line="108" selection-end-column="142" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/userAuthentication/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1039,6 +988,188 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/auth/signout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/auth/signupModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram//Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/client/src/semantic</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/yamljs/lib/Yaml.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/collections/admin.js#createComponents#465;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/admin.js#createDistributions#695;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/admin.js#initComponents#402;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/admin.js#initDistributions#629;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/admin.js#publish#887;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/admin.js#register#942;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/admin.js#release#832;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/admin.js#updateComponents#530;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/admin.js#updateDistributions#763;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/build/assets.js#chmod#152;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/assets.js#config#242;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/assets.js#gulp#94;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/assets.js#gulpif#192;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/assets.js#tasks#286;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/collections/build.js#buildAssets#259;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/build.js#buildCSS#213;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/build.js#buildJS#160;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/docs/build.js#autoprefixer#293;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#chmod#340;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#clone#380;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#config#847;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#configSetup#957;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#console#153;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#flatten#420;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#fs#197;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#gulp#95;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#gulpif#462;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#header#499;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#install#1011;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#internal.js#1356;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#less#540;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#map#229;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#metadata#1089;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#minifyCSS#579;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#plumber#623;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#print#665;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#rename#705;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#replace#746;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#tasks#912;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/build.js#uglify#788;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/rtl/build.js#autoprefixer#208;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#chmod#255;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#clone#295;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#config#762;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#flatten#335;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#fs#152;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#gulp#94;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#gulpif#377;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#install#872;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#internal.js#1260;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#less#414;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#minifyCSS#453;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#plumber#497;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#print#539;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#rename#579;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#replace#620;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#rtlcss#662;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#tasks#827;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/build.js#uglify#703;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/build.js#build.js#432;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build.js#config#223;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build.js#gulp#112;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build.js#install#266;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build.js#rtl.js#394;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build.js#runSequence#168;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/check-install.js#console#185;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/check-install.js#fs#153;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/check-install.js#gulp#119;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/check-install.js#install#229;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/clean.js#config#121;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/clean.js#del#94;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/clean.js#tasks#158;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/config/project/config.js#defaults#183;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/project/config.js#extend#92;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/project/config.js#fs#124;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/project/config.js#path#152;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/admin/components/create.js#concatFileNames#768;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#config#1230;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#console#543;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#debug#822;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#del#590;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#flatten#865;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#fs#626;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#git#910;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#gulp#482;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#jsonEditor#951;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#path#661;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#plumber#1000;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#project#1339;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#release#1280;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#rename#1045;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#replace#1089;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#runSequence#698;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#tap#1134;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/create.js#util#1175;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/admin/distributions/create.js#concatFileNames#587;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#config#1007;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#console#317;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#debug#641;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#del#364;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#flatten#684;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#fs#400;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#git#729;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#gulp#256;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#jsonEditor#770;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#mergeStream#517;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#path#435;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#plumber#819;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#project#1116;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#release#1057;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#rename#864;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#replace#908;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#runSequence#472;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/create.js#tap#953;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/build/css.js#autoprefixer#252;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#chmod#299;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#clone#339;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#config#761;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#console#152;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#flatten#379;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#fs#196;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#gulp#94;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#gulpif#421;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#install#850;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#internal.js#1238;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#less#458;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#minifyCSS#497;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#plumber#541;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#print#583;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#rename#623;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#replace#664;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#runSequence#706;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/css.js#tasks#805;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/config/defaults.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/config/docs.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/config/admin/github.js#fs#133;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/admin/github.js#githubAPI#197;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/admin/github.js#oAuth#321;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/admin/github.js#path#164;</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-print/lib/gulp-print.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/config/npm/gulpfile.js#build#331;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#buildAssets#475;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#buildCSS#428;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#buildDocs#692;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#buildJS#374;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#buildRTL#750;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#clean#539;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#config#197;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#gulp#92;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#serveDocs#644;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#version#582;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#watch#266;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/npm/gulpfile.js#watchRTL#797;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/gulpfile.js#build#331;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#buildAssets#475;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#buildCSS#428;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#buildDocs#692;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#buildJS#374;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#buildRTL#750;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#clean#539;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#config#197;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#gulp#92;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#serveDocs#644;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#version#582;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#watch#266;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/gulpfile.js#watchRTL#797;</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-plumber/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/require-dot-file/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/run-sequence/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-json-editor/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/merge-stream/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-less/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-help/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-if/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-flatten/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-header/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-watch/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-util/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-dedupe/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/better-console/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-concat/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-rtlcss/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/extend/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-uglify/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-concat-css/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-chmod/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/mkdirp/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-autoprefixer/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-prompt/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-clone/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-clean-css/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-rename/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/gulp-replace/index.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/admin/distributions/init.js#console#350;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/init.js#del#391;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/init.js#fs#421;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/init.js#git#481;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/init.js#github#600;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/init.js#githubAPI#516;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/init.js#gulp#295;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/init.js#mkdirp#549;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/init.js#oAuth#801;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/init.js#path#450;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/init.js#project#708;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/init.js#release#655;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/admin/components/init.js#console#349;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/init.js#del#390;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/init.js#fs#420;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/init.js#git#480;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/init.js#github#599;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/init.js#githubAPI#515;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/init.js#gulp#294;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/init.js#mkdirp#548;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/init.js#oAuth#800;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/init.js#path#449;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/init.js#project#707;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/init.js#release#654;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/config/project/install.js#defaults#162;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/project/install.js#fs#92;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/project/install.js#path#126;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/project/install.js#release#205;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/project/install.js#requireDotFile#247;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/install.js#chmod#744;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#config#1228;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#console#484;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#del#786;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#extend#530;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#fs#568;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#gulp#424;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#install#1154;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#jsonEditor#821;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#mkdirp#602;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#path#640;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#plumber#869;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#prompt#913;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#release#1311;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#rename#956;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#replace#999;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#requireDotFile#1043;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#runSequence#676;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/install.js#wrench#1091;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/collections/internal.js#chmod#361;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#clone#487;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#concat#401;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#concatCSS#442;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#config#955;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#dedupe#527;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#docsConfig#1001;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#fs#329;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#gulpif#568;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#header#605;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#less#646;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#minifyCSS#685;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#plumber#729;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#print#771;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#release#1117;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#rename#811;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#replace#852;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#tasks#1070;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/internal.js#uglify#894;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/build/javascript.js#chmod#252;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#config#590;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#console#152;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#flatten#292;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#fs#196;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#gulp#94;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#gulpif#334;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#install#679;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#internal.js#1067;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#plumber#371;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#print#413;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#rename#453;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#replace#494;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#tasks#634;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/build/javascript.js#uglify#536;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/docs/metadata.js#YAML#199;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/metadata.js#console#123;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/metadata.js#fs#167;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/admin/publish.js#runSequence#251;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/admin/register.js#process#250;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/register.js#release#301;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/config/project/release.js#package.json#363;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/project/release.js#requireDotFile#97;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/config/admin/release.js</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/admin/release.js#runSequence#308;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/collections/rtl.js#buildRTL#148;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/collections/rtl.js#watchRTL#194;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/docs/serve.js#autoprefixer#252;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#chmod#299;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#clone#339;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#config#843;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#configSetup#950;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#console#152;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#fs#196;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#gulp#94;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#gulpif#379;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#header#416;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#install#1004;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#internal.js#1247;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#less#457;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#minifyCSS#496;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#plumber#540;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#print#582;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#rename#622;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#replace#663;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#tasks#905;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#uglify#705;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#util#746;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/docs/serve.js#watch#785;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/config/tasks.js#config#45;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/tasks.js#console#6;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/tasks.js#release#76;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/admin/distributions/update.js#console#376;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/update.js#distributionPackage#1870;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/update.js#fs#422;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/update.js#git#492;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/update.js#github#636;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/update.js#githubAPI#532;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/update.js#gulp#316;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/update.js#oAuth#852;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/update.js#path#456;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/update.js#project#754;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/update.js#release#696;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/distributions/update.js#requireDotFile#570;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/admin/components/update.js#componentPackage#2117;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/update.js#console#370;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/update.js#fs#416;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/update.js#git#486;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/update.js#github#630;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/update.js#githubAPI#526;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/update.js#gulp#310;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/update.js#oAuth#846;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/update.js#path#450;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/update.js#project#748;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/update.js#release#690;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/admin/components/update.js#requireDotFile#564;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/config/user.js#config#347;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/user.js#defaults#304;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/user.js#extend#115;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/user.js#fs#154;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/user.js#path#189;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/config/user.js#requireDotFile#226;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/version.js#release#96;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/rtl/watch.js#autoprefixer#237;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#chmod#284;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#clone#324;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#config#828;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#console#145;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#fs#189;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#gulp#95;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#gulpif#364;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#install#935;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#internal.js#1324;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#less#401;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#minifyCSS#440;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#plumber#484;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#print#526;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#rename#566;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#replace#607;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#rtlcss#649;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#tasks#890;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#uglify#690;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#util#731;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/rtl/watch.js#watch#770;</node>
+            <node x="" y="">$PROJECT_DIR$/client/src/semantic/tasks/watch.js#autoprefixer#275;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#chmod#322;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#clone#362;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#config#825;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#console#175;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#fs#219;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#gulp#95;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#gulpif#402;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#install#930;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#internal.js#1387;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#less#439;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#minifyCSS#478;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#plumber#522;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#print#564;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#rename#604;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#replace#645;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#rtl.js#1349;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#tasks#886;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#uglify#687;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#util#728;/Users/Ryan/Desktop/Favors App/code/favors/client/src/semantic/tasks/watch.js#watch#767;</node>
+            <node x="" y="">$PROJECT_DIR$/client/node_modules/wrench-sui/lib/wrench.js</node>
+            <node x="" y="">assets</node>
+            <node x="" y="">build</node>
+            <node x="" y="">child_process</node>
+            <node x="" y="">clean</node>
+            <node x="" y="">css</node>
+            <node x="" y="">del</node>
+            <node x="" y="">fs</node>
+            <node x="" y="">github</node>
+            <node x="" y="">gulp-concat-filenames</node>
+            <node x="" y="">gulp-debug</node>
+            <node x="" y="">gulp-git</node>
+            <node x="" y="">gulp-tap</node>
+            <node x="" y="">javascript</node>
+            <node x="" y="">json</node>
+            <node x="" y="">map-stream</node>
+            <node x="" y="">oAuthConfig</node>
+            <node x="" y="">oauth</node>
+            <node x="" y="">package.json</node>
+            <node x="" y="">path</node>
+            <node x="" y="">serve</node>
+            <node x="" y="">user</node>
+            <node x="" y="">version</node>
+            <node x="" y="">watch</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7126570497906002" x="2271.5" y="2139.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="106" column="13" lean-forward="true" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/registerServiceWorker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/auth/require_auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/auth/signinModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="40" column="63" lean-forward="false" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1047,139 +1178,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/router.js">
+    <entry file="file://$PROJECT_DIR$/server/models/favor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="50" lean-forward="false" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/auth/require_auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/services/passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/favors/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/favors/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/controllers/authentication.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/userAuthentication/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="28" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/auth/signout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/auth/signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1857">
-          <caret line="125" column="84" lean-forward="false" selection-start-line="125" selection-start-column="84" selection-end-line="125" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/auth/signin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/auth_reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/favor_reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1191,60 +1194,215 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/nav/navfixed.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/me.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="63" column="41" lean-forward="false" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="41" />
+        <state relative-caret-position="285">
+          <caret line="19" column="21" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/favor_reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding>
-            <marker date="1501123685000" expanded="true" signature="2000:2594" ph="&lt;Menu.Menu/&gt;" />
+            <element signature="e#0#112#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/home.js">
+    <entry file="file://$PROJECT_DIR$/server/controllers/favor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="210">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/controllers/authentication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/services/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/userAuthentication/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/auth_reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/auth/signin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="57" lean-forward="false" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/userAuthentication/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="70" column="53" lean-forward="false" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="57" lean-forward="true" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/auth/signinModal.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/router/homeRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="40" column="63" lean-forward="false" selection-start-line="40" selection-start-column="63" selection-end-line="40" selection-end-column="63" />
+        <state relative-caret-position="60">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/auth/signupModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/homeRouter.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/router/nestedFavorRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/router/authRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/auth/signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="102" column="40" lean-forward="false" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/favors/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/favors/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/nav/navfixed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1501279561000" expanded="true" signature="2820:3433" ph="&lt;Menu.Menu/&gt;" />
           </folding>
         </state>
       </provider>

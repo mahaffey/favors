@@ -1,11 +1,11 @@
 import React from 'react'
 import { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import home from './home'
-import homeRouter from './homeRouter'
+import home from './features/home'
+import homeRouter from './features/router/homeRouter'
 import Signout from './auth/signout'
 import Footer from './nav/footer'
-import FeatureRouter from "./features/router"
+import FeatureRouter from "./features/router/authRouter"
 import RequireAuth from "./auth/require_auth"
 import { connect } from "react-redux"
 
@@ -14,7 +14,6 @@ class App extends Component {
 
     render () {
         return (
-            // I need to fix this asap
             <Router>
                 <div>
 

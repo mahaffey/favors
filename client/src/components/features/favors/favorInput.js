@@ -2,31 +2,36 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actions from "../../../actions/favors/index"
 import { Button, Form, Input, Select } from 'semantic-ui-react'
+import PropTypes from "prop-types"
 
 class FavorInput extends Component {
 
     constructor(props){
         super(props)
-
         this.state = {
-            posted_by: this.props.user,
-            volunteer: {},
+            posted_by: localStorage.uid,
+            volunteer: null,
             poster_is_offering_favor: null,
             description: '',
             category: '',
             cost: 10,
             is_completed: false,
             minimum_rep: 10,
-            due_date: ''
+            due_date: '',
+            image: ''
         };
     }
 
-    componentWillUpdate(nextProps) {
-        console.log("adding favor", nextProps, this.context, this)
-        // if (nextProps.authenticated) {
-        //     this.context.router.history.push("/favors")
-        // }
+    static contextTypes = {
+        router: PropTypes.object
     }
+
+    // componentWillUpdate(nextProps) {
+    //     console.log("adding favor", nextProps, this.context, this)
+    //     // if (nextProps.authenticated) {
+    //     //     this.context.router.history.push("/favors")
+    //     // }
+    // }
 
     handleChange = (event) => {
         const { name, value } = event.target
@@ -53,16 +58,17 @@ class FavorInput extends Component {
         // action creator dispatching credentials to validate on server
         this.props.addFavor(this.state)
         this.setState({
-            posted_by: this.props.user,
-            volunteer: {},
             poster_is_offering_favor: false,
             description: '',
             category: '',
             cost: 10,
             is_completed: false,
             minimum_rep: 10,
-            due_date: ''
+            due_date: '',
+            image: ''
         })
+
+        this.context.router.history.push("/favors/all")
     }
 
     renderAlert () {
@@ -108,8 +114,6 @@ class FavorInput extends Component {
                     <Input fluid type='text' action>
                         <Select fluid options={categories} value={this.state.category} name="category" onChange={this.handleSelect.bind(this)} />
                     </Input>
-
-
                 </Form.Field>
 
                 <Form.Field>
@@ -125,6 +129,12 @@ class FavorInput extends Component {
                 <Form.Field>
                     <label>Due Date</label>
                     <Input value={this.state.due_date} type="Date" name="due_date" onChange={this.handleChange} placeholder="Due Date"/>
+                </Form.Field>
+
+                <Form.Field>
+                    <label>Image Url</label>
+                    <Input value={this.state.image} name="image" onChange={this.handleChange} placeholder="
+                    Image url"/>
                 </Form.Field>
 
                 {this.renderAlert()}

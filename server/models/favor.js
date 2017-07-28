@@ -4,8 +4,9 @@ const Schema = mongoose.Schema
 // Define our model
 const favorSchema = new Schema({
     posted_by: {
-        type: Schema.Types.Mixed,
-        required: true
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: 'user'
     },
 
     volunteer: {
@@ -35,7 +36,6 @@ const favorSchema = new Schema({
 
     is_completed: {
         type: Boolean,
-        required: true,
         default: false
     },
 
@@ -45,9 +45,14 @@ const favorSchema = new Schema({
     },
 
     due_date: {
-        type: Date,
+        type: String,
         required: true
     },
+
+    image: {
+        type: String,
+        required: false
+    }
 })
 
 // Create the model class
@@ -55,4 +60,6 @@ const ModelClass = mongoose.model('favor', favorSchema)
 
 // Export the model
 module.exports = ModelClass
+
+
 

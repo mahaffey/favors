@@ -6,11 +6,25 @@ function tokenForUser (user) {
   return jwt.encode({ sub: user.id, iat: timestamp }, 'mysupersecret')
 }
 
+exports.getUser = function (req, res, next) {
+    console.log(req.user._id, 'we in this shiz')
+    User.findOne({_id: req.user._id}, function (err, user) {
+        if (err) {
+            throw err
+        }
+        else {
+            res.send(user)
+        }
+    })
+
+}
+
+
 exports.signin = function (req, res, next) {
   // User has already had their email and password auth'd
   // We just need to give them a token
   console.log('auth.sign', req.user)
-  res.status(200).send({ token: tokenForUser(req.user) })
+  res.status(200).send({ token: tokenForUser(req.user), user_id: req.user._id })
 }
 
 exports.signup = function (req, res, next) {

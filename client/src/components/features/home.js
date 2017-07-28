@@ -2,9 +2,9 @@ import React from 'react'
 import { Segment, Image, Container, Header, Button, Icon, Grid, Visibility } from 'semantic-ui-react'
 import { Link } from "react-router-dom"
 import { connect } from 'react-redux'
-import * as actions from '../actions/userAuthentication/index'
-import Nav from './nav/nav'
-import NavFixed from './nav/navfixed'
+import * as actions from '../../actions/userAuthentication/index'
+import Nav from '../nav/nav'
+import NavFixed from '../nav/navfixed'
 
 class Home extends React.Component {
     state = {}
