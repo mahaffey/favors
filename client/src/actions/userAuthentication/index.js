@@ -1,7 +1,7 @@
 import axios from "axios"
 import {
     AUTH_USER,
-    GET_USER_INFO,
+    GET_CURRENT_USER_INFO,
     UNAUTH_USER,
     AUTH_ERROR,
     FETCH_MESSAGE
@@ -30,11 +30,11 @@ export function signinUser ({ email, password }) {
     }
 }
 
-export function getUserInfo(uid) {
+export function getUserInfoOnAuth(uid) {
     return function (dispatch) {
         axios.get(`${ROOT_URL}/users/${uid}`, {headers: {'Authorization': localStorage.token}})
             .then(user => dispatch({
-                type: GET_USER_INFO,
+                type: GET_CURRENT_USER_INFO,
                 payload: user.data
         }))
             .catch(() => {

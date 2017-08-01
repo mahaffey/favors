@@ -1,6 +1,6 @@
 import {
     AUTH_USER,
-    GET_USER_INFO,
+    GET_CURRENT_USER_INFO,
     UNAUTH_USER,
     AUTH_ERROR,
     FETCH_MESSAGE
@@ -9,10 +9,8 @@ import {
 export default function (state = {user:{}, authenticated: false}, action) {
     switch (action.type) {
         case AUTH_USER:
-            debugger
             return { ...state, error: '', authenticated: true }
-        case GET_USER_INFO:
-            debugger
+        case GET_CURRENT_USER_INFO:
             return { ...state, error: '', user: action.payload }
         case UNAUTH_USER:
             return { ...state, error: '', authenticated: false }

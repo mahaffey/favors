@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import * as actions from "../../actions/userAuthentication/index"
-import { Menu, Button, Container, Icon } from "semantic-ui-react"
+import { Menu, Button, Container, Icon, Dropdown, Segment } from "semantic-ui-react"
 import { Link } from "react-router-dom"
 
 class FixedNav extends Component {
@@ -16,7 +16,7 @@ class FixedNav extends Component {
 
     componentWillMount(){
         if (this.props.authenticated)
-            return this.props.getUserInfo(localStorage.uid)
+            return this.props.getUserInfoOnAuth(localStorage.uid)
     }
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name})
@@ -24,6 +24,8 @@ class FixedNav extends Component {
     renderLinks (activeItem) {
         if (this.props.authenticated) {
             // show a link to sign out
+            const dropdownText =  this.props.user.firstName &&
+                (this.props.user.firstName.split('')[0].toUpperCase() + this.props.user.firstName.slice(1) )
             return [
                 <Link key="all" to="/favors/all">
                     <Menu.Item name="allFavors" active={activeItem === "allFavors"} onClick={this.handleItemClick}>
@@ -31,7 +33,7 @@ class FixedNav extends Component {
                     </Menu.Item>
                 </Link>,
 
-                <Link key="me" to="/favors/me">
+                <Link key="me" to="/favors/my_favors">
                     <Menu.Item name="myFavors" active={activeItem === "myFavors"} onClick={this.handleItemClick}>
                         My Favors
                     </Menu.Item>
@@ -45,24 +47,35 @@ class FixedNav extends Component {
 
                 <Menu.Menu key="right" position="right">
                     {/* need to add user show page from here*/}
-                    <Menu.Item>
-                        Welcome &nbsp;
-                        {this.props.user.firstName &&
-                        (this.props.user.firstName.split('')[0].toUpperCase() + this.props.user.firstName.slice(1))}
-                        &nbsp;&nbsp;
-                        <Icon name="money"/>
-                        {this.props.user.wallet} &nbsp;Points&nbsp;
-                        <Icon name="check"/>
-                        {this.props.user.rep} Rep
-                    </Menu.Item>
 
+                        <Menu.Item active={activeItem === "info"} onClick={this.handleItemClick}>
+                            Welcome &nbsp;
+                            <Dropdown text={dropdownText}>
+                                <Dropdown.Menu>
+                                    <Link to="/favors/users/me">
+                                        <Dropdown.Item active text='My Profile' />
+                                    </Link>
 
-                        <Link to="/signout">
-                            <Menu.Item name="signout" active={activeItem === "signout"}
-                                       onClick={this.handleItemClick}>
-                                Sign Out
-                            </Menu.Item>
-                        </Link>
+                                    <Link to="/favors/users">
+                                        <Dropdown.Item active text='Users Near Me' />
+                                    </Link>
+
+                                    <Dropdown.Divider />
+
+                                    <Link to="/signout">
+                                        <Dropdown.Item text='Sign Out' />
+                                    </Link>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <Link to="/favors/users/me/buy_points">
+                                <Icon name="money"/>
+                                {this.props.user.wallet} &nbsp;Points&nbsp;
+                            </Link>
+                            <Icon name="check"/>
+                            {this.props.user.rep} Rep
+                        </Menu.Item>
+
                 </Menu.Menu>]
 
 
@@ -92,11 +105,17 @@ class FixedNav extends Component {
     render () {
         const activeItem = this.state.activeItem
         return (
+            <Segment
+                textAlign='center'
+                style={{padding: '1.5em 0em' }}
+                vertical
+            >
             <Menu fixed="top" size='large'>
                 <Container>
                     {this.renderLinks(activeItem)}
                 </Container>
             </Menu>
+            </Segment>
         )
     }
 }
