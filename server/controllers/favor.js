@@ -112,8 +112,7 @@ exports.getFavor = function (req, res, next) {
 }
 
 exports.newFavor = function (req, res, next) {
-    const posted_by = req.body.posted_by
-    const volunteer = req.body.volunteer
+    const posted_by = req.body.posted_by.id
     const poster_is_offering_favor = req.body.poster_is_offering_favor
     const description = req.body.description
     const category = req.body.category
@@ -122,9 +121,10 @@ exports.newFavor = function (req, res, next) {
     const due_date =  req.body.due_date
     const image = req.body.image
 
+    console.log(req.body)
     const favor = new Favor({
         posted_by: posted_by,
-        volunteer: volunteer,
+        volunteer: null,
         poster_is_offering_favor: poster_is_offering_favor,
         description: description,
         category: category,

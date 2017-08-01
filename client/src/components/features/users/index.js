@@ -18,7 +18,6 @@ class UserIndex extends React.Component {
     }
 
     render() {
-        debugger
         const Users =  this.props.users && this.props.users.map((el) => {
                 return <User key={el._id} user={el}/>
             })
@@ -39,7 +38,7 @@ class UserIndex extends React.Component {
                 </Container>
                 <Segment padded>
                     <Container fluid>
-                        <Card.Group itemsPerRow={1}>
+                        <Card.Group itemsPerRow={3}>
                             { Users }
                         </Card.Group>
                     </Container>

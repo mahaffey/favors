@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { Card, Icon, Image } from 'semantic-ui-react'
 
 export default class Favor extends Component {
@@ -19,30 +19,39 @@ export default class Favor extends Component {
         }
     }
 
+    favorLink() { return this.props.favor._id && (
+            '/favors/all/' + this.props.favor._id
+        )
+    }
+
     render() {
         if (!this.props.is_completed) {
             return (
                 <Card raised>
                     <Image src={this.image()} alt="bad image"/>
                     <Card.Content>
-                        <Card.Header>
-                            {this.category()}
-                        </Card.Header>
-                        <Card.Meta>
-        <span className='date'>
-          Posted By: {this.props.favor.posted_by.firstName + ' ' + this.props.favor.posted_by.lastName}
-        </span>
-                        </Card.Meta>
-                        <Card.Description>
-                            {this.props.favor.poster_is_offering_favor ? "Offering" : "Looking For"}: {this.props.favor.description}
-                        </Card.Description>
+                        <Link to={this.favorLink()}>
+                            <Card.Header>
+                                {this.category()}
+                            </Card.Header>
+                            <Card.Meta>
+            <span className='date'>
+              Posted By: {this.props.favor.posted_by.firstName + ' ' + this.props.favor.posted_by.lastName}
+            </span>
+                            </Card.Meta>
+                            <Card.Description>
+                                {this.props.favor.poster_is_offering_favor ? "Offering" : "Looking For"}: {this.props.favor.description}
+                            </Card.Description>
+                        </Link>
                     </Card.Content>
                     <Card.Content extra>
-                        <a>
-                            <Icon name='calendar' /> {this.props.favor.due_date} <br/>
-                            <Icon name='money' /> {this.props.favor.cost} favor points <br/>
-                            <Icon name='checkmark' /> {this.props.favor.minimum_rep} rep points
-                        </a>
+                        <Link to={this.favorLink()}>
+                            <a>
+                                <Icon name='calendar' /> {this.props.favor.due_date} <br/>
+                                <Icon name='money' /> {this.props.favor.cost} favor points <br/>
+                                <Icon name='checkmark' /> {this.props.favor.minimum_rep} rep points
+                            </a>
+                        </Link>
                     </Card.Content>
                 </Card>
             )

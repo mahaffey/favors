@@ -1,6 +1,91 @@
 import React from 'react'
-import { Segment, Container, Header, Card } from 'semantic-ui-react'
+import { Segment, Container, Header, Card, Image, Grid, Table, Label } from 'semantic-ui-react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import * as actions from '../../../actions/favors/index'
 
-import { Card, Icon, Image } from 'semantic-ui-react'
+class favorShow extends React.Component {
+    static contextTypes = {
+        router: PropTypes.object
+    }
+
+    favor = () => {
+        let urlSuffix = this.context.router.history.location.pathname.split('/')[3]
+        return (this.props.favor.filter((el) => {return el._id === urlSuffix }))[0]
+    }
+
+
+    render() {
+        debugger
+        let favor = this.favor()
+        let offer = this.favor && this.favor.poster_is_offering_favor ? "Offering" : "Looking For"
+
+        return (
+            <div>
+                <Grid padded>
+                    <Grid.Row>
+                        <Grid.Column width={7}>
+                            <Card centered fluid>
+                                <Image bordered shape='rounded' src={favor && favor.image} />
+                                <h2>{offer}: {favor && favor.description}</h2>
+                                <h2>Category: {favor && favor.category}</h2>
+                                <Table celled>
+                                    <Table.Header>
+                                        <Table.Row>
+                                            <Table.HeaderCell>Min Rep</Table.HeaderCell>
+                                            <Table.HeaderCell>Cost</Table.HeaderCell>
+                                            <Table.HeaderCell>Due Date</Table.HeaderCell>
+                                        </Table.Row>
+                                    </Table.Header>
+
+                                    <Table.Body>
+                                        <Table.Row>
+
+                                            <Table.Cell positive>
+                                                {favor && favor.minimum_rep}
+                                            </Table.Cell>
+
+                                            <Table.Cell>
+                                                {favor && favor.cost}
+                                            </Table.Cell>
+
+                                            <Table.Cell negative>
+                                                {favor && favor.due_date}
+                                            </Table.Cell>
+
+                                        </Table.Row>
+                                    </Table.Body>
+                                 </Table>
+
+                            </Card>
+                        </Grid.Column>
+
+                        <Grid.Column width={8} >
+
+                            <Card centered fluid>
+                                <Table >
+                                    <Table.Header>
+                                        <Table.HeaderCell colSpan='1'><Label as='a' ribbon color="red">Wazzzzaa</Label></Table.HeaderCell>
+                                    </Table.Header>
+                                </Table>
+
+                                <br></br>
+                            </Card>
+
+                        </Grid.Column>
+                    </Grid.Row>
+
+                </Grid>
+            </div>
+        )}
+
+}
+
+const mapStateToProps = (state) => {
+    return {
+        user: state.user.users,
+        auth: state.auth,
+        favor: state.favor.favors}
+}
+
+export default connect(mapStateToProps, actions)(favorShow)

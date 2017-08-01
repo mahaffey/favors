@@ -21,6 +21,10 @@ class FixedNav extends Component {
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name})
 
+    isAdmin(){
+        return this.props.user && this.props.user.admin ? "Admin Mode" : null
+    }
+
     renderLinks (activeItem) {
         if (this.props.authenticated) {
             // show a link to sign out
@@ -46,7 +50,6 @@ class FixedNav extends Component {
                 </Link>,
 
                 <Menu.Menu key="right" position="right">
-                    {/* need to add user show page from here*/}
 
                         <Menu.Item active={activeItem === "info"} onClick={this.handleItemClick}>
                             Welcome &nbsp;
@@ -74,6 +77,8 @@ class FixedNav extends Component {
                             </Link>
                             <Icon name="check"/>
                             {this.props.user.rep} Rep
+                            &nbsp;&nbsp;
+                            {this.isAdmin()}
                         </Menu.Item>
 
                 </Menu.Menu>]

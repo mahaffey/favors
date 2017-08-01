@@ -39,3 +39,17 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.scrolling-page {
+  display: block;
+  width: auto;
+  max-height: 500px;
+  padding: 1em;
+
+}
+
+.card-scroller {
+  padding-right: 1em !important;
+  max-height: 400px !important;
+  overflow: auto !important;
+}

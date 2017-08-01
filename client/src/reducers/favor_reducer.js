@@ -8,7 +8,8 @@ import {
 export default function (state = {loading: false, favors: []}, action) {
     switch (action.type) {
         case ADD_FAVOR:
-            return { ...state, favors: action.payload }
+            let favors = [...state.favors, action.payload]
+            return {...state, favors: favors}
         case LOADING_FAVORS:
             return { ...state, loading: true}
         case GET_FAVORS:

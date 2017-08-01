@@ -17,6 +17,7 @@ class FavorIndex extends React.Component {
             nextProps.getFavors()
     }
 
+
     render() {
         let myFavors = this.props.me
         const Favors =  this.props.favors && this.props.favors.map((el) => {

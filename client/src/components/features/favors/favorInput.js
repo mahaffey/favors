@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actions from "../../../actions/favors/index"
+import imagesModal from "./imagesModal"
 import { Button, Form, Input, Select } from 'semantic-ui-react'
 import PropTypes from "prop-types"
 
@@ -9,7 +10,11 @@ class FavorInput extends Component {
     constructor(props){
         super(props)
         this.state = {
-            posted_by: localStorage.uid,
+            posted_by: {
+                id: localStorage.uid,
+                firstName: null,
+                lastName:  null
+            },
             volunteer: null,
             poster_is_offering_favor: null,
             description: '',
@@ -25,13 +30,6 @@ class FavorInput extends Component {
     static contextTypes = {
         router: PropTypes.object
     }
-
-    // componentWillUpdate(nextProps) {
-    //     console.log("adding favor", nextProps, this.context, this)
-    //     // if (nextProps.authenticated) {
-    //     //     this.context.router.history.push("/favors")
-    //     // }
-    // }
 
     handleChange = (event) => {
         const { name, value } = event.target
@@ -56,7 +54,12 @@ class FavorInput extends Component {
 
     handleFormSubmit (event) {
         // action creator dispatching credentials to validate on server
-        this.props.addFavor(this.state)
+        let poster = {
+            id: localStorage.uid,
+            firstName: this.props.state.auth.user.firstName,
+            lastName: this.props.state.auth.user.lastName
+        }
+        this.props.addFavor({...this.state, posted_by: poster})
         this.setState({
             poster_is_offering_favor: false,
             description: '',
@@ -66,9 +69,16 @@ class FavorInput extends Component {
             minimum_rep: 10,
             due_date: '',
             image: ''
-        })
+        }, () => this.context.router.history.push("/favors/all"))
 
-        this.context.router.history.push("/favors/all")
+    }
+
+    picChooser (event) {
+        const { name, value } = event.target
+        this.setState({
+            [name]: value,
+        })
+        return <imagesModal modalOpen={true} />
     }
 
     renderAlert () {
@@ -94,6 +104,7 @@ class FavorInput extends Component {
         ]
 
         return(
+            <div>
             <Form onSubmit={this.handleFormSubmit.bind(this)}>
 
                 <Form.Group inline>
@@ -131,10 +142,11 @@ class FavorInput extends Component {
                     <Input value={this.state.due_date} type="Date" name="due_date" onChange={this.handleChange} placeholder="Due Date"/>
                 </Form.Field>
 
+
+
                 <Form.Field>
                     <label>Image Url</label>
-                    <Input value={this.state.image} name="image" onChange={this.handleChange} placeholder="
-                    Image url"/>
+                    <Input value={this.state.image} onChange={this.handleChange} name="image"  placeholder="Image url"/>
                 </Form.Field>
 
                 {this.renderAlert()}
@@ -142,6 +154,8 @@ class FavorInput extends Component {
                 <Button type="submit">Submit New Favor</Button>
 
             </Form>
+
+                </div>
         );
     }
 };

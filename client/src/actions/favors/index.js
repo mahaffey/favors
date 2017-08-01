@@ -15,7 +15,10 @@ export function addFavor ({ posted_by, volunteer, poster_is_offering_favor, desc
             { posted_by, volunteer, poster_is_offering_favor, description, category, cost, is_completed, minimum_rep, due_date, image },
             {headers: {'Authorization': localStorage.token}})
             .then(
-                dispatch({ type: ADD_FAVOR })
+                dispatch({
+                    type: ADD_FAVOR,
+                    payload: { posted_by, volunteer, poster_is_offering_favor, description, category, cost, is_completed, minimum_rep, due_date, image }
+                })
             )
             .catch(response => {
                 console.log(response.type, response.message, "POO")

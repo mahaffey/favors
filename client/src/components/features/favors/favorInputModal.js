@@ -1,7 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import FavorInput from './favorInput'
-import { Button, Icon, Modal, } from 'semantic-ui-react'
+import imagesModalTab from './imagesModal'
+import { Button, Icon, Modal, Tab } from 'semantic-ui-react'
+
+const modalForm = () => {
+    return  (
+        <div>
+            <Modal.Header icon='browser' >
+                <h1> New Favor </h1>
+            </Modal.Header>
+
+            <Modal.Content>
+            <FavorInput />
+            </Modal.Content>
+
+
+        </div>
+    )
+}
+
+
+
+const panes = [
+    {menuItem: 'Favor Form', render: () => <Tab.Pane>{modalForm()}</Tab.Pane>},
+    {menuItem: 'Image Selector', render: () => <Tab.Pane>{imagesModalTab()}</Tab.Pane>},
+
+]
 
 export default class favorInputModal extends React.Component {
     constructor(props) {
@@ -25,13 +50,8 @@ export default class favorInputModal extends React.Component {
                 size='small'
                 closeOnDimmerClick={false}
             >
-                <Modal.Header icon='browser' >
-                    <h1> New Favor </h1>
-                </Modal.Header>
 
-                <Modal.Content>
-                    <FavorInput />
-                </Modal.Content>
+                <Tab panes={panes} />
 
                 <Modal.Actions>
                     <Link to='/favors/all'>

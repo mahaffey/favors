@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import UserShow from './userShow'
+import FavorShow from './favorShow'
 import { Button, Icon, Modal, Header} from 'semantic-ui-react'
 
-export default class userShowModal extends React.Component {
+export default class favorShowModal extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -28,7 +28,7 @@ export default class userShowModal extends React.Component {
                 <Modal
                     open={this.state.modalOpen}
                     onClose={this.handleClose}
-                    size='fullscreen'
+                    size='small'
                     closeOnDimmerClick={false}
                 >
                     <Modal.Header>
@@ -37,14 +37,14 @@ export default class userShowModal extends React.Component {
                     </Modal.Header>
 
                     <Modal.Content>
-                       <UserShow />
+                        <FavorShow />
 
                     </Modal.Content>
 
                     <Modal.Actions>
-                            <Button color='green' onClick={this.handleClose} inverted>
-                                <Icon name='window close' /> Go back
-                            </Button>
+                        <Button color='green' onClick={this.handleClose} inverted>
+                            <Icon name='window close' /> Go back
+                        </Button>
                     </Modal.Actions>
 
                 </Modal>
