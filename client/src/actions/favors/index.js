@@ -4,6 +4,7 @@ import {
     LOADING_FAVORS,
     GET_FAVORS,
     FAVOR_ERROR,
+    CLICK_PIC,
     // DELETE_FAVOR,
 } from "./types"
 
@@ -46,5 +47,15 @@ export function favorError (error) {
     return {
         type: FAVOR_ERROR,
         payload: error
+    }
+}
+
+export function clickPic (event) {
+    const pic = event.target.src
+    return function (dispatch) {
+        dispatch({
+            type: CLICK_PIC,
+            payload: pic
+        })
     }
 }

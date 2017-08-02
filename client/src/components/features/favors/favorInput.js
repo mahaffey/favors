@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actions from "../../../actions/favors/index"
-import imagesModal from "./imagesModal"
 import { Button, Form, Input, Select } from 'semantic-ui-react'
 import PropTypes from "prop-types"
 
@@ -10,6 +9,7 @@ class FavorInput extends Component {
     constructor(props){
         super(props)
         this.state = {
+            active: false,
             posted_by: {
                 id: localStorage.uid,
                 firstName: null,
@@ -29,6 +29,14 @@ class FavorInput extends Component {
 
     static contextTypes = {
         router: PropTypes.object
+    }
+
+
+
+    componentDidMount() {
+        if (this.props.state && this.props.state.favor.pic !== "") {
+            this.picChooser()
+        }
     }
 
     handleChange = (event) => {
@@ -54,6 +62,7 @@ class FavorInput extends Component {
 
     handleFormSubmit (event) {
         // action creator dispatching credentials to validate on server
+        debugger
         let poster = {
             id: localStorage.uid,
             firstName: this.props.state.auth.user.firstName,
@@ -71,14 +80,15 @@ class FavorInput extends Component {
             image: ''
         }, () => this.context.router.history.push("/favors/all"))
 
+        // this.props.handleModal()
+
     }
 
     picChooser (event) {
-        const { name, value } = event.target
-        this.setState({
-            [name]: value,
-        })
-        return <imagesModal modalOpen={true} />
+        if (this.props.state && this.props.state.favor.pic !== "")
+            this.setState({
+                image: this.props.state.favor.pic,
+            })
     }
 
     renderAlert () {
@@ -104,7 +114,7 @@ class FavorInput extends Component {
         ]
 
         return(
-            <div>
+
             <Form onSubmit={this.handleFormSubmit.bind(this)}>
 
                 <Form.Group inline>
@@ -146,7 +156,7 @@ class FavorInput extends Component {
 
                 <Form.Field>
                     <label>Image Url</label>
-                    <Input value={this.state.image} onChange={this.handleChange} name="image"  placeholder="Image url"/>
+                    <Input value={this.state.image} onClick={this.picChooser.bind(this)} onChange={this.handleChange} name="image"  placeholder="Image url"/>
                 </Form.Field>
 
                 {this.renderAlert()}
@@ -155,7 +165,6 @@ class FavorInput extends Component {
 
             </Form>
 
-                </div>
         );
     }
 };

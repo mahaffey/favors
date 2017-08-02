@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import FavorInput from './favorInput'
-import imagesModalTab from './imagesModal'
-import { Button, Icon, Modal, Tab } from 'semantic-ui-react'
+import ImagesModalTab from './imagesModal'
+import { Button, Icon, Modal, Tab, Card } from 'semantic-ui-react'
 
 const modalForm = () => {
     return  (
@@ -12,19 +12,30 @@ const modalForm = () => {
             </Modal.Header>
 
             <Modal.Content>
-            <FavorInput />
+                //refactor into class git commit you dingus!!
+                <FavorInput />
             </Modal.Content>
-
-
         </div>
     )
 }
 
+const images = () => {
+    return (
+        <div>
+            <Modal.Header icon='browser' >
+                 <h1> Pick A Pic! </h1>
+            </Modal.Header>
 
+            <Modal.Content>
+                   <ImagesModalTab />
+            </Modal.Content>
+        </div>
+    )
+}
 
 const panes = [
     {menuItem: 'Favor Form', render: () => <Tab.Pane>{modalForm()}</Tab.Pane>},
-    {menuItem: 'Image Selector', render: () => <Tab.Pane>{imagesModalTab()}</Tab.Pane>},
+    {menuItem: 'Image Selector', render: () => <Tab.Pane>{images()}</Tab.Pane>},
 
 ]
 

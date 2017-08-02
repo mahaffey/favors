@@ -14,12 +14,25 @@ class favorShow extends React.Component {
         return (this.props.favor.filter((el) => {return el._id === urlSuffix }))[0]
     }
 
+    minRep = () => {
+        return this.favor() && (this.favor().minimum_rep > this.props.auth.user.rep)
+    }
+
+    havePoints = () => {
+        return this.favor() && (this.favor().cost > this.props.auth.user.wallet)
+    }
 
     render() {
-        debugger
         let favor = this.favor()
         let offer = this.favor && this.favor.poster_is_offering_favor ? "Offering" : "Looking For"
-
+        let userName = favor && (
+            favor.posted_by.firstName
+                .split('')[0]
+                .toUpperCase() + favor.posted_by.firstName.slice(1) + ' ' +
+            favor.posted_by.lastName
+                .split('')[0]
+                .toUpperCase() + favor.posted_by.lastName.slice(1)
+            )
         return (
             <div>
                 <Grid padded>
@@ -41,15 +54,17 @@ class favorShow extends React.Component {
                                     <Table.Body>
                                         <Table.Row>
 
-                                            <Table.Cell positive>
+                                            <Table.Cell negative={this.minRep()}
+                                                        positive={!this.minRep()}>
                                                 {favor && favor.minimum_rep}
                                             </Table.Cell>
 
-                                            <Table.Cell>
+                                            <Table.Cell negative={this.havePoints()}
+                                                        positive={!this.havePoints()}>
                                                 {favor && favor.cost}
                                             </Table.Cell>
 
-                                            <Table.Cell negative>
+                                            <Table.Cell>
                                                 {favor && favor.due_date}
                                             </Table.Cell>
 
@@ -61,14 +76,25 @@ class favorShow extends React.Component {
                         </Grid.Column>
 
                         <Grid.Column width={8} >
-
                             <Card centered fluid>
                                 <Table >
                                     <Table.Header>
-                                        <Table.HeaderCell colSpan='1'><Label as='a' ribbon color="red">Wazzzzaa</Label></Table.HeaderCell>
+                                        <Table.HeaderCell colSpan='1'>
+                                            <Label as='a' ribbon color="red">
+                                                Poster Info
+                                            </Label>
+                                        </Table.HeaderCell>
                                     </Table.Header>
                                 </Table>
+                                <Header as='h2' color='grey' textAlign='left'>
+                                    Name: {userName}
+                                </Header>
 
+                                <Header as='h2' color='grey' textAlign='left'>
+                                    Rep: {favor && favor.posted_by.rep}
+                                    <br/><br/>
+                                    Contact: {favor && favor.posted_by.email}
+                                </Header>
                                 <br></br>
                             </Card>
 

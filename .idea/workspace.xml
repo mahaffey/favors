@@ -2,27 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25792ad-4243-45c8-9595-28b34520f673" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favorShowModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/components/features/favors/imagesModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/src/components/features/favors/userShowFavors.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/actions/favors/index.js" afterPath="$PROJECT_DIR$/client/src/actions/favors/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/actions/favors/types.js" afterPath="$PROJECT_DIR$/client/src/actions/favors/types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/favors/favor.js" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/favors/favorInput.js" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favorInput.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/favors/favorShow.js" afterPath="$PROJECT_DIR$/client/src/components/features/favors/favorShow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/favors/index.js" afterPath="$PROJECT_DIR$/client/src/components/features/favors/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/router/authRouter.js" afterPath="$PROJECT_DIR$/client/src/components/features/router/authRouter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/users/index.js" afterPath="$PROJECT_DIR$/client/src/components/features/users/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/users/user.js" afterPath="$PROJECT_DIR$/client/src/components/features/users/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/users/userShow.js" afterPath="$PROJECT_DIR$/client/src/components/features/users/userShow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/users/userShowModal.js" afterPath="$PROJECT_DIR$/client/src/components/features/users/userShowModal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/nav/navfixed.js" afterPath="$PROJECT_DIR$/client/src/components/nav/navfixed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/css/App.css" afterPath="$PROJECT_DIR$/client/src/css/App.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/favors/imagesModal.js" afterPath="$PROJECT_DIR$/client/src/components/features/favors/imagesModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/features/users/buyFavorPointsModal.js" afterPath="$PROJECT_DIR$/client/src/components/features/users/buyFavorPointsModal.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/reducers/favor_reducer.js" afterPath="$PROJECT_DIR$/client/src/reducers/favor_reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/reducers/user_reducer.js" afterPath="$PROJECT_DIR$/client/src/reducers/user_reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/controllers/favor.js" afterPath="$PROJECT_DIR$/server/controllers/favor.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,39 +24,17 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.42558748">
       <split-first>
         <leaf>
-          <file leaf-file-name="userShowFavors.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/userShowFavors.js">
+          <file leaf-file-name="favorInputModal.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                <state relative-caret-position="495">
+                  <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="favorShow.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorShow.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
-                  <folding>
-                    <element signature="e#0#25#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="favorShowModal.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorShowModal.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -77,13 +43,47 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="userShow.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/src/components/features/users/userShow.js">
+          <file leaf-file-name="favorInput.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInput.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="147">
-                  <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+                <state relative-caret-position="-482">
+                  <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#0#40#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="homeRouter.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/components/features/router/homeRouter.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="authRouter.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/components/features/router/authRouter.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
                   <folding>
                     <element signature="e#0#25#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="imagesModal.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/imagesModal.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="480">
+                  <caret line="29" column="75" lean-forward="false" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
+                  <folding>
+                    <element signature="e#0#40#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -102,13 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.filter((e</find>
-      <find>.filter((</find>
-      <find>.filter(</find>
-      <find>.filter</find>
-      <find>Ima</find>
-      <find>Image</find>
-      <find>&lt;Image</find>
       <find>&lt;</find>
       <find>&lt;Card</find>
       <find>&lt;Card.Fr</find>
@@ -131,6 +124,13 @@
       <find>scrolling-p</find>
       <find>scrolling-pa</find>
       <find>d</find>
+      <find>H</find>
+      <find>Hae</find>
+      <find>Ha</find>
+      <find>Hera</find>
+      <find>Her</find>
+      <find>He</find>
+      <find>Header</find>
       <find>debugger</find>
     </findStrings>
   </component>
@@ -140,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/components/auth/require_auth.js" />
         <option value="$PROJECT_DIR$/server/models/user.js" />
         <option value="$PROJECT_DIR$/client/src/components/nav/nav.js" />
         <option value="$PROJECT_DIR$/client/src/components/home.js" />
@@ -175,14 +174,8 @@
         <option value="$PROJECT_DIR$/client/src/components/features/users/index.js" />
         <option value="$PROJECT_DIR$/client/src/components/nav/navfixed.js" />
         <option value="$PROJECT_DIR$/client/src/components/features/users/user.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/favors/types.js" />
-        <option value="$PROJECT_DIR$/client/src/actions/favors/index.js" />
-        <option value="$PROJECT_DIR$/client/src/reducers/favor_reducer.js" />
         <option value="$PROJECT_DIR$/client/src/components/features/favors/index.js" />
         <option value="$PROJECT_DIR$/server/controllers/favor.js" />
-        <option value="$PROJECT_DIR$/client/src/components/features/favors/favorInput.js" />
-        <option value="$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js" />
-        <option value="$PROJECT_DIR$/client/src/components/features/favors/imagesModal.js" />
         <option value="$PROJECT_DIR$/client/src/components/features/router/authRouter.js" />
         <option value="$PROJECT_DIR$/client/src/components/features/users/userShowModal.js" />
         <option value="$PROJECT_DIR$/client/src/components/features/favors/favor.js" />
@@ -190,7 +183,14 @@
         <option value="$PROJECT_DIR$/client/src/components/features/users/userShow.js" />
         <option value="$PROJECT_DIR$/client/src/components/features/favors/userShowFavors.js" />
         <option value="$PROJECT_DIR$/client/src/components/features/favors/favorShowModal.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/favors/types.js" />
         <option value="$PROJECT_DIR$/client/src/components/features/favors/favorShow.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/favors/test.js" />
+        <option value="$PROJECT_DIR$/client/src/reducers/favor_reducer.js" />
+        <option value="$PROJECT_DIR$/client/src/actions/favors/index.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/favors/imagesModal.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/favors/favorInput.js" />
+        <option value="$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js" />
       </list>
     </option>
   </component>
@@ -814,12 +814,12 @@
       <workItem from="1500912594839" duration="37000" />
       <workItem from="1500912781766" duration="609000" />
       <workItem from="1500913399430" duration="42992000" />
-      <workItem from="1501017280964" duration="104249000" />
+      <workItem from="1501017280964" duration="117633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147887000" />
+    <option name="totallyTimeSpent" value="161271000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -895,25 +895,12 @@
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/client/src/components/features/favors/favorShow.js</url>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/src/components/nav/nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="60" column="36" lean-forward="false" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/me.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1072,14 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/userAuthentication/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/actions/userAuthentication/types.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1094,16 +1073,6 @@
           <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/router/homeRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1152,70 +1121,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/nav/navfixed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="51" column="56" lean-forward="false" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/favors/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/models/favor.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/actions/favors/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/imagesModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/auth_reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/router/authRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="50" lean-forward="true" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1225,24 +1134,6 @@
         <state relative-caret-position="305">
           <caret line="110" column="6" lean-forward="true" selection-start-line="110" selection-start-column="6" selection-end-line="110" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/reducers/favor_reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="61" column="32" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,7 +1184,7 @@
         <state relative-caret-position="510">
           <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
           <folding>
-            <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1306,23 +1197,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/users/userShow.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/nav/navfixed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/userShowFavors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="310">
+          <caret line="51" column="56" lean-forward="false" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1334,10 +1213,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorShow.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/users/userShow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/userShowFavors.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="34" column="65" lean-forward="false" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+          <caret line="34" column="42" lean-forward="true" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/userAuthentication/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/auth_reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="17" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/favors/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorShow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/reducers/favor_reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/actions/favors/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="50" column="1" lean-forward="true" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/router/homeRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/router/authRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/imagesModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="29" column="75" lean-forward="false" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-482">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/features/favors/favorInputModal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

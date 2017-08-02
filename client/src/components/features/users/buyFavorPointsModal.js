@@ -25,7 +25,6 @@ class buyPoints extends React.Component {
 
 
     render() {
-        debugger
         return (
             <div>
                 <Modal
