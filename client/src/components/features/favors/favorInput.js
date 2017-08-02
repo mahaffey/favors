@@ -80,7 +80,7 @@ class FavorInput extends Component {
             image: ''
         }, () => this.context.router.history.push("/favors/all"))
 
-        // this.props.handleModal()
+        this.props.handleModal()
 
     }
 

@@ -15,6 +15,12 @@ class Signup extends Component {
             firstName: '',
             lastName: '',
             zipCode: '',
+            errors: {
+                email: null,
+                password: null,
+                passwordConfirm: null,
+                passwordMatch: null
+            }
 
         }
     }
@@ -32,19 +38,44 @@ class Signup extends Component {
     }
 
     handleFormSubmit () {
-        // Call action creator to sign up the user
-        // this.props.signupUser(formProps)
+        this.validate()
 
-        this.props.signupUser(this.state)
+        if (this.state.errors.email === null &&
+            this.state.errors.password === null &&
+            this.state.errors.passwordConfirm === null &&
+            this.state.errors.passwordConfirm === null &&
+            this.state.errors.passwordMatch === null) {
+                this.props.signupUser(this.state)
+        }
     }
 
     renderAlert () {
-        if (this.props.errorMessage) {
-            return (
-                <div className="alert alert-danger">
-                    <strong>Oops!</strong> {this.props.errorMessage}
-                </div>
-            )
+        if (this.state.errors.email !== null ||
+            this.state.errors.password !== null ||
+            this.state.errors.passwordConfirm !== null ||
+            this.state.errors.passwordConfirm !== null ||
+            this.state.errors.passwordMatch !== null) {
+
+                let errorArray = [this.state.errors.email,
+                this.state.errors.password,
+                this.state.errors.passwordConfirm,
+                this.state.errors.passwordConfirm,
+                this.state.errors.passwordMatch]
+
+                const mappedError = () => {
+                    return (errorArray.map((el, idx) => {
+                        if (el) {return <li key={idx}>{el}</li>}
+                    }))
+                }
+                debugger
+                return (
+                    <div className="alert alert-danger">
+                        <strong>Oops!</strong>
+                        <ol>
+                            {mappedError()}
+                        </ol>
+                    </div>
+                )
         }
     }
 
@@ -55,9 +86,36 @@ class Signup extends Component {
         })
     }
 
+    validate = () => {
+        debugger
+        if (!this.state.email) {
+            this.setState({errors: {...this.state.errors, email: "Please enter an email"} })
+        } else {
+            this.setState({errors: {...this.state.errors, email: null}})
+        }
+
+        if (!this.state.password) {
+            this.setState({errors: {...this.state.errors, password: "Please enter a password"} })
+        } else {
+            this.setState({errors: {...this.state.errors, password: null}})
+        }
+
+        if (!this.state.passwordConfirm) {
+            this.setState({errors: {...this.state.errors, passwordConfirm: "Please enter a password confirmation"}})
+        } else {
+            this.setState({errors: {...this.state.errors, passwordConfirm: null}})
+        }
+
+        if (this.state.password !== this.state.passwordConfirm) {
+            this.setState({errors: {...this.state.errors, passwordMatch: "Passwords must match"}})
+        } else {
+            this.setState({errors: {...this.state.errors, passwordMatch: null}})
+        }
+
+        return this.state.errors
+    }
+
     render () {
-        // const { handleSubmit, fields: { email, password, passwordConfirm }} = this.props
-        // console.log(this.props, email)
 
         return (
             <Form onSubmit={this.handleFormSubmit.bind(this)}>
@@ -100,56 +158,10 @@ class Signup extends Component {
     }
 }
 
-// want to implement in form validations
-// function validate (formProps) {
-//     const errors = {}
-//
-//     if (!formProps.email) {
-//         errors.email = "Please enter an email"
-//     }
-//
-//     if (!formProps.password) {
-//         errors.password = "Please enter a password"
-//     }
-//
-//     if (!formProps.passwordConfirm) {
-//         errors.passwordConfirm = "Please enter a password confirmation"
-//     }
-//
-//     if (formProps.password !== formProps.passwordConfirm) {
-//         errors.password = "Passwords must match"
-//     }
-//
-//     return errors
-// }
+
 
 function mapStateToProps (state) {
     return { errorMessage: state.auth.error, authenticated: state.auth.authenticated }
 }
 
 export default connect(mapStateToProps, actions)(Signup)
-
-// export default reduxForm({
-//     form: "signup",
-//     fields: ["email", "password", "passwordConfirm"],
-//     validate
-// }, mapStateToProps, actions)(Signup)
-
-
-// <fieldset className="form-group">
-//     <label>Email:</label>
-// <input className="form-control" {...email} />
-// {email.touched && email.error && <div className="error">{email.error}</div>}
-// </fieldset>
-// <fieldset className="form-group">
-//     <label>Password:</label>
-//     <input className="form-control" {...password} type="password" />
-//     {password.touched && password.error && <div className="error">{password.error}</div>}
-// </fieldset>
-// <fieldset className="form-group">
-//     <label>Confirm Password:</label>
-//     <input className="form-control" {...passwordConfirm} type="password" />
-//     {passwordConfirm.touched && passwordConfirm.error && <div className="error">{passwordConfirm.error}</div>}
-// </fieldset>
-// {this.renderAlert()}
-// <button action="submit" className="btn btn-primary">Sign up!</button>
