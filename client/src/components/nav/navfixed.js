@@ -43,12 +43,6 @@ class FixedNav extends Component {
                     </Menu.Item>
                 </Link>,
 
-                <Link key="new" to="/favors/all/new">
-                    <Menu.Item name="favorInput" active={activeItem === "favorInput"} onClick={this.handleItemClick}>
-                        New Favor
-                    </Menu.Item>
-                </Link>,
-
                 <Menu.Menu key="right" position="right">
 
                         <Menu.Item active={activeItem === "info"} onClick={this.handleItemClick}>
@@ -115,7 +109,7 @@ class FixedNav extends Component {
                 style={{padding: '1.5em 0em' }}
                 vertical
             >
-            <Menu fixed="top" size='large'>
+            <Menu fixed="top" size='large' style={{backgroundColor: "orange"}}>
                 <Container>
                     {this.renderLinks(activeItem)}
                 </Container>

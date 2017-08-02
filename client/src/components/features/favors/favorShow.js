@@ -1,5 +1,5 @@
 import React from 'react'
-import { Segment, Container, Header, Card, Image, Grid, Table, Label } from 'semantic-ui-react'
+import { Header, Card, Image, Grid, Table, Label } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import * as actions from '../../../actions/favors/index'
@@ -11,7 +11,13 @@ class favorShow extends React.Component {
 
     favor = () => {
         let urlSuffix = this.context.router.history.location.pathname.split('/')[3]
-        return (this.props.favor.filter((el) => {return el._id === urlSuffix }))[0]
+
+        if (urlSuffix === 'newest') {
+            let idx = this.props.favor.length - 1
+            return this.props.favor[idx]
+        }
+
+        return (this.props.favor.filter((el) => {return el._id === urlSuffix}))[0]
     }
 
     minRep = () => {
@@ -87,13 +93,13 @@ class favorShow extends React.Component {
                                     </Table.Header>
                                 </Table>
                                 <Header as='h2' color='grey' textAlign='left'>
-                                    Name: {userName}
+                                    Name: {userName || "Not Available"}
                                 </Header>
 
                                 <Header as='h2' color='grey' textAlign='left'>
-                                    Rep: {favor && favor.posted_by.rep}
+                                    Rep: {(favor && favor.posted_by.rep) || "Not Available"}
                                     <br/><br/>
-                                    Contact: {favor && favor.posted_by.email}
+                                    Contact: {(favor && favor.posted_by.email) || "Not Available"}
                                 </Header>
                                 <br></br>
                             </Card>

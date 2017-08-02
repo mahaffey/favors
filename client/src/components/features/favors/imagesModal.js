@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Icon, Card, Image} from 'semantic-ui-react'
+import { Card, Image} from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import * as actions from "../../../actions/favors/index"
 

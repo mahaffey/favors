@@ -12,7 +12,8 @@ const userSchema = new Schema({
   zip: Number,
   rep: Number,
   wallet: Number,
-  birth: Date,
+  avatar: String,
+  birth: String,
   admin: Boolean
 })
 

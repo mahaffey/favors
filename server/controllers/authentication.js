@@ -22,6 +22,7 @@ exports.signup = function (req, res, next) {
   const birth = req.body.birth
   const radius = req.body.radius
   const zip = req.body.zip
+  const avatar = req.body.avatar
   const rep = 10
   const wallet = 10
   const admin = false
@@ -51,6 +52,7 @@ exports.signup = function (req, res, next) {
       zip: zip,
       radius: radius,
       birth: birth,
+      avatar: avatar,
       admin: admin
     })
     console.log('creating new user', user)

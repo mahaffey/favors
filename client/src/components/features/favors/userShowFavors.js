@@ -1,5 +1,5 @@
 import React from 'react'
-import { Segment, Container, Header, Card } from 'semantic-ui-react'
+import { Segment, Container, Card } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import * as actions from '../../../actions/favors/index'
 import Favor from './favor'

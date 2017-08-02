@@ -20,8 +20,7 @@ class Signup extends Component {
                 password: null,
                 passwordConfirm: null,
                 passwordMatch: null
-            }
-
+            },
         }
     }
 
@@ -31,25 +30,25 @@ class Signup extends Component {
     }
 
     componentWillUpdate(nextProps) {
-        console.log("updating signup", nextProps, this.context)
+        // console.log("updating signup", nextProps, this.context)
         if (nextProps.authenticated) {
             this.context.router.history.push("/favors/all")
         }
     }
 
     handleFormSubmit () {
-        this.validate()
-
         if (this.state.errors.email === null &&
             this.state.errors.password === null &&
             this.state.errors.passwordConfirm === null &&
             this.state.errors.passwordConfirm === null &&
             this.state.errors.passwordMatch === null) {
-                this.props.signupUser(this.state)
+                // this.props.signupUser(this.state)
+            console.log("signed up", this.state)
         }
     }
 
     renderAlert () {
+        debugger
         if (this.state.errors.email !== null ||
             this.state.errors.password !== null ||
             this.state.errors.passwordConfirm !== null ||
@@ -68,6 +67,7 @@ class Signup extends Component {
                     }))
                 }
                 debugger
+
                 return (
                     <div className="alert alert-danger">
                         <strong>Oops!</strong>
@@ -84,12 +84,15 @@ class Signup extends Component {
         this.setState({
             [name]: value,
         })
+        this.validate()
+
     }
 
     validate = () => {
         debugger
         if (!this.state.email) {
-            this.setState({errors: {...this.state.errors, email: "Please enter an email"} })
+            this.setState({errors: Object.assign({}, this.state.errors, {email: "Please enter an email"})})
+            debugger
         } else {
             this.setState({errors: {...this.state.errors, email: null}})
         }
@@ -112,7 +115,6 @@ class Signup extends Component {
             this.setState({errors: {...this.state.errors, passwordMatch: null}})
         }
 
-        return this.state.errors
     }
 
     render () {
@@ -121,7 +123,7 @@ class Signup extends Component {
             <Form onSubmit={this.handleFormSubmit.bind(this)}>
                 <Form.Field>
                     <Input icon='user'
-                           iconPosition='left' value={this.state.email} name="email" onChange={this.handleChange} placeholder="Email"/>
+                           iconPosition='left' type='email' value={this.state.email} name="email" onChange={this.handleChange} placeholder="Email"/>
                 </Form.Field>
 
                 <Form.Field>

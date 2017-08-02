@@ -10,8 +10,20 @@ const favorSchema = new Schema({
     },
 
     volunteer: {
-        type: Schema.Types.Mixed,
-        required: false
+        accepted: {
+            type: Boolean,
+            required: false
+        },
+
+        pending: {
+            type: Boolean,
+            required: false
+        },
+
+        user: {
+            type: Schema.Types.ObjectId,
+            required: false
+        }
     },
 
     poster_is_offering_favor: {
@@ -22,6 +34,11 @@ const favorSchema = new Schema({
     description: {
         type: String,
         required: true
+    },
+
+    long_description: {
+        type: String,
+        required: false
     },
 
     category: {
@@ -53,7 +70,14 @@ const favorSchema = new Schema({
         type: String,
         required: false
     }
-})
+},
+    {
+        timestamps: {
+            createdAt: 'created_at',
+            updatedAt: 'updated_at'
+        }
+    }
+)
 
 // Create the model class
 const ModelClass = mongoose.model('favor', favorSchema)

@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { Card, Icon, Image } from 'semantic-ui-react'
+import PropTypes from "prop-types"
+
 
 export default class Favor extends Component {
+
+    static contextTypes = {
+        router: PropTypes.object
+    }
+
     image() {
         if (this.props.favor.image === undefined || this.props.favor.image === '') {
             return 'http://alloveralbany.com/images/something_goes_here.jpg'
@@ -12,23 +19,28 @@ export default class Favor extends Component {
     }
 
     category() {
-        if (this.props.favor.category === undefined) {
+        if (this.props.favor.category === undefined || this.props.favor.category === "") {
             return 'No Category'
         } else {
             return this.props.favor.category.split('')[0].toUpperCase() + this.props.favor.category.slice(1)
         }
     }
 
-    favorLink() { return this.props.favor._id && (
-            '/favors/all/' + this.props.favor._id
-        )
+    favorLink() {
+        return ((this.props.favor._id && (
+            '/favors/show/' + this.props.favor._id
+        )) || '/favors/show/newest')
+    }
+
+    redirect() {
+        this.context.router.history.push(this.favorLink())
     }
 
     render() {
         if (!this.props.is_completed) {
             return (
                 <Card raised>
-                    <Image src={this.image()} alt="bad image"/>
+                    <Image src={this.image()} alt="bad image" onClick={this.redirect.bind(this)} />
                     <Card.Content>
                         <Link to={this.favorLink()}>
                             <Card.Header>
@@ -45,7 +57,7 @@ export default class Favor extends Component {
                         </Link>
                     </Card.Content>
                     <Card.Content extra>
-                        <Link to={this.favorLink()}>
+                        <Link to={this.favorLink() }>
                             <a>
                                 <Icon name='calendar' /> {this.props.favor.due_date} <br/>
                                 <Icon name='money' /> {this.props.favor.cost} favor points <br/>

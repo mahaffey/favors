@@ -1,7 +1,8 @@
 import React from 'react'
-import { Segment, Container, Header, Card } from 'semantic-ui-react'
+import { Segment, Container, Header, Card, Button } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import * as actions from '../../../actions/favors/index'
+import FavorInputModal from './favorInputModal'
 import Favor from './favor'
 
 class FavorIndex extends React.Component {
@@ -17,18 +18,26 @@ class FavorIndex extends React.Component {
             nextProps.getFavors()
     }
 
+    openModal() {
+        this.props.modalState()
+    }
+
+    mapFavors() {
+        let myFavors = this.props.me
+        let mapped
+
+        if (this.props.favors) {
+            mapped = this.props.favors.map((el, idx) => {
+                if (myFavors && el.posted_by._id !== localStorage.uid)   {
+                    return null
+                }
+                return <Favor key={idx} idx={idx} favor={el}/>
+            })
+        }
+        return mapped
+    }
 
     render() {
-        let myFavors = this.props.me
-        const Favors =  this.props.favors && this.props.favors.map((el) => {
-            if (myFavors && el.posted_by._id !== localStorage.uid)   {
-                return null
-            }
-            return <Favor key={el._id} favor={el}/>
-            })
-
-        console.log(Favors)
-
         return (
             <Segment
                 textAlign='center'
@@ -36,17 +45,22 @@ class FavorIndex extends React.Component {
                 vertical
                 inverted
             >
+                <FavorInputModal />
+
                 <Container text>
                     <Header
                         as='h1'
                         content='Need Some Help?'
-                        style={{ fontSize: '3em', fontWeight: 'normal', marginBottom: 0, marginTop: '1em', color: 'ghostwhite' }}
+                        style={{ fontSize: '3em', fontWeight: 'normal', marginBottom: '.5em', marginTop: '.5em', color: 'ghostwhite' }}
                     />
                 </Container>
+
+                <Button inverted color="orange" onClick={this.openModal.bind(this)}>New Favor</Button>
+
                 <Segment padded>
                     <Container fluid>
                         <Card.Group itemsPerRow={4}>
-                            { Favors }
+                            { this.mapFavors() }
                         </Card.Group>
                     </Container>
                 </Segment>
@@ -56,7 +70,8 @@ class FavorIndex extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return {favors: state.favor.favors}
+    return {favors: state.favor.favors,
+            modal: state.favor.modal}
 }
 
 export default connect(mapStateToProps, actions)(FavorIndex)

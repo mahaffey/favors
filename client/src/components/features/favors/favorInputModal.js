@@ -1,21 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { connect } from "react-redux"
+import * as actions from "../../../actions/favors/index"
 import FavorInput from './favorInput'
 import ImagesModalTab from './imagesModal'
-import { Button, Icon, Modal, Tab, Card } from 'semantic-ui-react'
+import { Button, Icon, Modal, Tab } from 'semantic-ui-react'
 
 
 
-export default class favorInputModal extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            modalOpen: true
-        }
-    }
+class FavorInputModal extends React.Component {
 
     handleClose = () => {
-        this.setState({modalOpen: false})
+        this.props.modalState()
     }
 
 
@@ -57,8 +52,8 @@ export default class favorInputModal extends React.Component {
 
         return (
             <Modal
-                open={this.state.modalOpen}
-                onClose={this.handleClose}
+                open={this.props.modal}
+                onClose={this.handleClose.bind(this)}
                 size='small'
                 closeOnDimmerClick={false}
             >
@@ -66,14 +61,20 @@ export default class favorInputModal extends React.Component {
                 <Tab panes={panes} />
 
                 <Modal.Actions>
-                    <Link to='/favors/all'>
-                        <Button color='green' onClick={this.handleClose} inverted>
-                            <Icon name='window close' /> Go back
-                        </Button>
-                    </Link>
+                    <Button color='green' onClick={this.handleClose} inverted>
+                        <Icon name='window close' /> Go back
+                    </Button>
                 </Modal.Actions>
 
             </Modal>
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        modal: state.favor.modal
+    }
+}
+
+export default connect(mapStateToProps, actions)(FavorInputModal)

@@ -5,20 +5,22 @@ import {
     GET_FAVORS,
     FAVOR_ERROR,
     CLICK_PIC,
+    SAVE_FAVOR_FORM,
+    MODAL_STATE,
     // DELETE_FAVOR,
 } from "./types"
 
 const ROOT_URL = "http://localhost:3001/api/v1/favors"
 
-export function addFavor ({ posted_by, volunteer, poster_is_offering_favor, description, category, cost, is_completed, minimum_rep, due_date, image }) {
+export function addFavor ({ posted_by, volunteer, poster_is_offering_favor, description, description_long, category, cost, is_completed, minimum_rep, due_date, image }) {
     return function (dispatch) {
         axios.post(`${ROOT_URL}/new`,
-            { posted_by, volunteer, poster_is_offering_favor, description, category, cost, is_completed, minimum_rep, due_date, image },
+            { posted_by, volunteer, poster_is_offering_favor, description, description_long,  category, cost, is_completed, minimum_rep, due_date, image },
             {headers: {'Authorization': localStorage.token}})
-            .then(
+            .then( res =>
                 dispatch({
                     type: ADD_FAVOR,
-                    payload: { posted_by, volunteer, poster_is_offering_favor, description, category, cost, is_completed, minimum_rep, due_date, image }
+                    payload: { posted_by, volunteer, poster_is_offering_favor, description, description_long, category, cost, is_completed, minimum_rep, due_date, image }
                 })
             )
             .catch(response => {
@@ -56,6 +58,23 @@ export function clickPic (event) {
         dispatch({
             type: CLICK_PIC,
             payload: pic
+        })
+    }
+}
+
+export function saveForm (state) {
+    return function (dispatch) {
+        dispatch({
+            type: SAVE_FAVOR_FORM,
+            payload: state
+        })
+    }
+}
+
+export function modalState () {
+    return function (dispatch) {
+        dispatch({
+            type: MODAL_STATE,
         })
     }
 }

@@ -42,6 +42,7 @@ exports.getFavors = function (req, res, next) {
                     volunteer: volunteerInfo(el),
                     poster_is_offering_favor: el.poster_is_offering_favor,
                     description: el.description,
+                    description_long: el.description_long,
                     category: el.category,
                     cost: el.cost,
                     due_date: el.due_date,
@@ -70,12 +71,14 @@ exports.getFavor = function (req, res, next) {
             if (favor.volunteer === null) {
                 return null
             } else {
-                return { _id: favor.volunteer._id,
+                return {
+                    _id: favor.volunteer._id,
                     email: favor.volunteer.email,
                     firstName: favor.volunteer.firstName,
                     lastName: favor.volunteer.lastName,
                     rep: favor.volunteer.rep,
                     wallet: favor.volunteer.wallet,
+                    avatar: favor.volunteer.avatar,
                     admin: favor.volunteer.admin,
                     __v: favor.volunteer.__v}
             }
@@ -90,12 +93,14 @@ exports.getFavor = function (req, res, next) {
                     lastName: favor.posted_by.lastName,
                     rep: favor.posted_by.rep,
                     wallet: favor.posted_by.wallet,
+                    avatar: favor.posted_by.avatar,
                     admin: favor.posted_by.admin,
                     __v: favor.posted_by.__v
                 },
                 volunteer: volunteerInfo(favor),
                 poster_is_offering_favor: favor.poster_is_offering_favor,
                 description: favor.description,
+                description_long: favor.description_long,
                 category: favor.category,
                 cost: favor.cost,
                 due_date: favor.due_date,
@@ -115,18 +120,20 @@ exports.newFavor = function (req, res, next) {
     const posted_by = req.body.posted_by.id
     const poster_is_offering_favor = req.body.poster_is_offering_favor
     const description = req.body.description
+    const description_long= req.body.description_long
     const category = req.body.category
     const cost = req.body.cost
     const minimum_rep = req.body.minimum_rep
     const due_date =  req.body.due_date
     const image = req.body.image
 
-    console.log(req.body)
+    // console.log(req.body)
     const favor = new Favor({
         posted_by: posted_by,
         volunteer: null,
         poster_is_offering_favor: poster_is_offering_favor,
         description: description,
+        description_long: description_long,
         category: category,
         cost: cost,
         minimum_rep: minimum_rep,
@@ -140,7 +147,6 @@ exports.newFavor = function (req, res, next) {
         Favor.findById(newFavor._id).populate('posted_by').exec((err, populatedFavor) => {
             res.json({ favor: populatedFavor })
         })
-        // Respond to request indicating the favor was created
 
     })
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Segment, Container, Header, Card, Image, Grid, Table, Label, Icon } from 'semantic-ui-react'
+import { Card, Image, Grid, Table, Label, Icon } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import Favors from '../favors/userShowFavors'
 import PropTypes from 'prop-types'
