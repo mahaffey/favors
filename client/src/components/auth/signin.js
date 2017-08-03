@@ -18,6 +18,11 @@ class Signin extends Component {
     static contextTypes = {
         router: PropTypes.object
     }
+
+    componentWillMount(){
+        this.props.clearErrorMessage()
+    }
+
     componentWillUpdate(nextProps) {
         // console.log("updating signin", nextProps, this.context)
         if (nextProps.authenticated) {

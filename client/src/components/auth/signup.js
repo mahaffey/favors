@@ -19,6 +19,10 @@ class Signup extends Component {
         router: PropTypes.object
     }
 
+    componentWillMount(){
+        this.props.clearErrorMessage()
+    }
+
     componentWillUpdate(nextProps) {
         if (nextProps.authenticated) {
             this.context.router.history.push("/favors/all")
@@ -33,6 +37,7 @@ class Signup extends Component {
 
 
     renderAlert () {
+        debugger
         if (this.props.errorMessage) {
             return (
                 <div>

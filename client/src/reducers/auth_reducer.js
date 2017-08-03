@@ -3,6 +3,7 @@ import {
     GET_CURRENT_USER_INFO,
     UNAUTH_USER,
     AUTH_ERROR,
+    CLEAR_ERROR_MESSAGE,
     FETCH_MESSAGE
 } from "../actions/userAuthentication/types"
 
@@ -16,6 +17,9 @@ export default function (state = {user:{}, authenticated: false}, action) {
             return { ...state, error: '', authenticated: false }
         case AUTH_ERROR:
             return { ...state, error: action.payload }
+        case CLEAR_ERROR_MESSAGE:
+            debugger
+            return {...state, error: ''}
         case FETCH_MESSAGE:
             return { ...state, message: action.payload }
         default:

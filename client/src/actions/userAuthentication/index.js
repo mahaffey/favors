@@ -4,6 +4,7 @@ import {
     GET_CURRENT_USER_INFO,
     UNAUTH_USER,
     AUTH_ERROR,
+    CLEAR_ERROR_MESSAGE,
     FETCH_MESSAGE
 } from "./types"
 
@@ -73,10 +74,15 @@ export function signupUser ({ email, password, firstName, lastName, zipCode }) {
 }
 
 export function authError (error) {
-
     return {
         type: AUTH_ERROR,
         payload: error
+    }
+}
+
+export function clearErrorMessage() {
+    return {
+        type: CLEAR_ERROR_MESSAGE
     }
 }
 
