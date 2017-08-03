@@ -15,7 +15,6 @@ class FixedNav extends Component {
     }
 
     componentWillMount(){
-        debugger
         if (this.props.authenticated && localStorage.uid)
             return this.props.getUserInfoOnAuth(localStorage.uid)
     }

@@ -2,12 +2,11 @@ import React from 'react'
 import { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import home from './features/home'
-import homeRouter from './features/router/homeRouter'
+import homeRouter from './router/homeRouter'
 import Signout from './auth/signout'
 import Footer from './nav/footer'
-import FeatureRouter from "./features/router/authRouter"
+import FeatureRouter from "./router/authRouter"
 import RequireAuth from "./auth/require_auth"
-import { connect } from "react-redux"
 // import NotFound from './nav/404'
 
 

@@ -2,18 +2,19 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import * as actions from "../../actions/userAuthentication/index"
 import PropTypes from "prop-types"
-import { Button, Form, Input } from 'semantic-ui-react'
+import { Message, Label } from 'semantic-ui-react'
+import { Form } from 'formsy-semantic-ui-react'
+
 
 class Signin extends Component {
-    //add the router object to this.context to allow for redirects
+    // trying out formsy, instead of redux-form
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            email: '',
-            password: ''
-        }
+    state = {
+        email: '',
+        password: ''
     }
+
+    //add the router object to this.context to allow for redirects
     static contextTypes = {
         router: PropTypes.object
     }
@@ -24,43 +25,53 @@ class Signin extends Component {
         }
     }
 
-    handleFormSubmit = (event) => {
+    handleSubmit = formData => {
         // action creator dispatching credentials to validate on server
-        this.props.signinUser(this.state)
+        this.props.signinUser(formData)
     }
 
-    handleChange = (event) => {
-        const { name, value } = event.target
-        this.setState({
-            [name]: value,
-        })
+    handleChange = formData => {
+        this.setState(formData)
     }
 
     renderAlert () {
-        if (this.props.errorMessage) {
-            return (
-                <div className="alert alert-danger">
-                    <strong>Oops!</strong> {this.props.errorMessage}
-                </div>
-            )
-        }
+        debugger
+        const err = this.props.errorMessage
+        if (err)
+            return <Message error>Oops! {err}</Message>
     }
 
     render () {
         return (
             <div>
-                <Form onSubmit={this.handleFormSubmit}>
-                    <Form.Field>
-                        <Input icon='user'
-                               iconPosition='left' value={this.state.email} name="email" onChange={this.handleChange} placeholder="email"/>
-                    </Form.Field>
-                    <Form.Field>
-                        <Input icon='lock'
-                               iconPosition='left' value={this.state.password} name='password' onChange={this.handleChange} type="password" placeholder="password" />
-                    </Form.Field>
-                    {this.renderAlert()}
-                    <Button type="submit">Sign in</Button>
+                <Form onChange={this.handleChange} onValidSubmit={this.handleSubmit}>
+                    <Form.Input
+                        name='email'
+                        placeholder='Email'
+                        value={this.state.email}
+                        errorLabel={ <Label color='red' pointing /> }
+                        validationErrors={{
+                            isDefaultRequiredValue: 'Email is required'
+                        }}
+                        icon='user'
+                        iconPosition='left'
+                        required />
+
+                    <Form.Input
+                        type='password'
+                        name='password'
+                        placeholder='Password'
+                        value={this.state.password}
+                        errorLabel={ <Label color='red' pointing /> }
+                        validationErrors={{
+                            isDefaultRequiredValue: 'Password is required'
+                        }}
+                        icon='lock'
+                        iconPosition='left'
+                        required />
+                    <Form.Button type='submit' inverted color='green'>Sign In</Form.Button>
                 </Form>
+                {this.renderAlert()}
             </div>
         )
     }

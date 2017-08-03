@@ -3,7 +3,7 @@ import { reduxForm, Field } from "redux-form"
 import * as actions from "../../actions/userAuthentication/index"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { Button, Label, Input, Message, Form } from "semantic-ui-react"
+import { Button, Label, Message } from "semantic-ui-react"
 
 const renderInput = field =>
     <div>
