@@ -62,7 +62,7 @@ class FavorInputModal extends React.Component {
 
                 <Modal.Actions>
                     <Button color='green' onClick={this.handleClose} inverted>
-                        <Icon name='window close' /> Go back
+                        <Icon name='window close' /> Close Form
                     </Button>
                 </Modal.Actions>
 

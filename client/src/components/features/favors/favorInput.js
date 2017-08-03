@@ -52,7 +52,6 @@ class FavorInput extends Component {
         this.setState({
             [name]: value,
         })
-        debugger
     }
 
     handleRadio (event) {

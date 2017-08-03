@@ -6,6 +6,6 @@ export const FAVOR_ERROR = "favor_error"
 export const FAVOR_VOLUNTEER = "favor_volunteer"
 export const CLICK_PIC = "click_pic"
 export const SAVE_FAVOR_FORM = "save_favor_form"
-export const MODAL_STATE = "modal_state"
+export const MODAL_STATE = "modal_state" //this is for the new favor form modal, I could have done this in parent prop, but I'm using redux dammit
 
 

@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 
 
 exports.getFavors = function (req, res, next) {
-    Favor.find().populate('posted_by').exec((err, favors) => {
+    Favor.find().sort( { 'created_at': -1} ).populate('posted_by').exec((err, favors) => {
         if (err) {
             throw err
         }
@@ -117,6 +117,7 @@ exports.getFavor = function (req, res, next) {
 }
 
 exports.newFavor = function (req, res, next) {
+    console.log(req.body)
     const posted_by = req.body.posted_by.id
     const poster_is_offering_favor = req.body.poster_is_offering_favor
     const description = req.body.description

@@ -36,7 +36,7 @@ const favorSchema = new Schema({
         required: true
     },
 
-    long_description: {
+    description_long: {
         type: String,
         required: false
     },
