@@ -90,11 +90,11 @@ class FixedNav extends Component {
 
                     <Menu.Menu key="signInSignUp" position="right">
                         <Link to="/index/signin">
-                            <Button as='a' active={activeItem === "signinModal"}
+                            <Button className="menu-button" as='a' active={activeItem === "signinModal"}
                                     onClick={this.handleItemClick}>Sign in</Button>
                         </Link>
                         <Link to="/index/signup">
-                            <Button as='a' style={{ marginLeft: '0.5em' }} primary active={activeItem === "signupModal"}
+                            <Button className="menu-button" as='a' style={{ marginLeft: '0.5em' }} primary active={activeItem === "signupModal"}
                                     onClick={this.handleItemClick}>Sign Up</Button>
                         </Link>
                     </Menu.Menu>
