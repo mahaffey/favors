@@ -27,7 +27,6 @@ class FavorIndex extends React.Component {
         let mapped
 
         if (this.props.favors) {
-            debugger
             mapped = this.props.favors.map((el, idx) => {
                 if (myFavors && el.posted_by._id && el.posted_by._id !== localStorage.uid)   {
                     return null

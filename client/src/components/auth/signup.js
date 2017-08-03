@@ -1,169 +1,203 @@
 import React, { Component } from "react"
-import { connect } from "react-redux"
+import { reduxForm, Field } from "redux-form"
 import * as actions from "../../actions/userAuthentication/index"
 import PropTypes from "prop-types"
-import { Button, Form, Input } from 'semantic-ui-react'
+import { connect } from "react-redux"
+import { Button, Label, Input, Message, Form } from "semantic-ui-react"
+
+const renderInput = field =>
+    <div>
+        <input style={{padding: "10px", border: "none", borderBottom: "solid 2px #c9c9c9", transition: "border 0.3s"}} placeholder={field.placeholder} {...field.input} type={field.type}/>
+        {field.meta.touched &&
+        field.meta.error &&
+        <Message error className="error">{field.meta.error}</Message>}
+    </div>
+
 
 class Signup extends Component {
-
-    constructor(props) {
-        super(props)
-        this.state = {
-            email: '',
-            password: '',
-            passwordConfirm: '',
-            firstName: '',
-            lastName: '',
-            zipCode: '',
-            errors: {
-                email: null,
-                password: null,
-                passwordConfirm: null,
-                passwordMatch: null
-            },
-        }
-    }
-
-
     static contextTypes = {
         router: PropTypes.object
     }
 
     componentWillUpdate(nextProps) {
-        // console.log("updating signup", nextProps, this.context)
         if (nextProps.authenticated) {
             this.context.router.history.push("/favors/all")
         }
     }
 
-    handleFormSubmit () {
-        if (this.state.errors.email === null &&
-            this.state.errors.password === null &&
-            this.state.errors.passwordConfirm === null &&
-            this.state.errors.passwordConfirm === null &&
-            this.state.errors.passwordMatch === null) {
-                // this.props.signupUser(this.state)
-            console.log("signed up", this.state)
-        }
+    handleFormSubmit (formProps) {
+        // Call action creator to sign up the user
+        this.props.signupUser(formProps)
     }
+
+
 
     renderAlert () {
-        debugger
-        if (this.state.errors.email !== null ||
-            this.state.errors.password !== null ||
-            this.state.errors.passwordConfirm !== null ||
-            this.state.errors.passwordConfirm !== null ||
-            this.state.errors.passwordMatch !== null) {
-
-                let errorArray = [this.state.errors.email,
-                this.state.errors.password,
-                this.state.errors.passwordConfirm,
-                this.state.errors.passwordConfirm,
-                this.state.errors.passwordMatch]
-
-                const mappedError = () => {
-                    return (errorArray.map((el, idx) => {
-                        if (el) {return <li key={idx}>{el}</li>}
-                    }))
-                }
-                debugger
-
-                return (
-                    <div className="alert alert-danger">
-                        <strong>Oops!</strong>
-                        <ol>
-                            {mappedError()}
-                        </ol>
-                    </div>
-                )
+        if (this.props.errorMessage) {
+            return (
+                <div>
+                    <Message error>Oops! {this.props.errorMessage}</Message>
+                </div>
+            )
         }
-    }
-
-    handleChange = (event) => {
-        const { name, value } = event.target
-        this.setState({
-            [name]: value,
-        })
-        this.validate()
-
-    }
-
-    validate = () => {
-        debugger
-        if (!this.state.email) {
-            this.setState({errors: Object.assign({}, this.state.errors, {email: "Please enter an email"})})
-            debugger
-        } else {
-            this.setState({errors: {...this.state.errors, email: null}})
-        }
-
-        if (!this.state.password) {
-            this.setState({errors: {...this.state.errors, password: "Please enter a password"} })
-        } else {
-            this.setState({errors: {...this.state.errors, password: null}})
-        }
-
-        if (!this.state.passwordConfirm) {
-            this.setState({errors: {...this.state.errors, passwordConfirm: "Please enter a password confirmation"}})
-        } else {
-            this.setState({errors: {...this.state.errors, passwordConfirm: null}})
-        }
-
-        if (this.state.password !== this.state.passwordConfirm) {
-            this.setState({errors: {...this.state.errors, passwordMatch: "Passwords must match"}})
-        } else {
-            this.setState({errors: {...this.state.errors, passwordMatch: null}})
-        }
-
     }
 
     render () {
+        const { handleSubmit } = this.props
 
         return (
-            <Form onSubmit={this.handleFormSubmit.bind(this)}>
-                <Form.Field>
-                    <Input icon='user'
-                           iconPosition='left' type='email' value={this.state.email} name="email" onChange={this.handleChange} placeholder="Email"/>
-                </Form.Field>
-
-                <Form.Field>
-                    <Input icon='lock'
-                           iconPosition='left' value={this.state.password} name="password" type="password" onChange={this.handleChange} placeholder="Password"/>
-                </Form.Field>
-
-                <Form.Field>
-                    <Input icon='lock'
-                           iconPosition='left' value={this.state.passwordConfirm} name="passwordConfirm" type="password" onChange={this.handleChange} placeholder="Password Confirmation"/>
-                </Form.Field>
-
-                <Form.Field>
-                    <Input icon='leaf'
-                           iconPosition='left' value={this.state.firstName} name="firstName" onChange={this.handleChange} placeholder="First Name"/>
-                </Form.Field>
-
-                <Form.Field>
-                    <Input icon='leaf'
-                           iconPosition='left' value={this.state.lastName} name="lastName" onChange={this.handleChange} placeholder="Last Name"/>
-                </Form.Field>
-
-                <Form.Field>
-                    <Input icon='map outline'
-                           iconPosition='left' value={this.state.zipCode} name="zipCode" onChange={this.handleChange} placeholder="Zip Code"/>
-                </Form.Field>
+            <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+                <div>
+                    <Label basic color="orange" htmlFor="email">Email:</Label>
+                    <Field
+                        name="email"
+                        placeholder="example@me.com"
+                        component={renderInput}
+                        type="text" />
+                </div>
+                <br/>
+                <div>
+                    <Label basic color="orange" htmlFor="firstName">First Name:</Label>
+                    <Field
+                        name="firstName"
+                        placeholder="David"
+                        component={renderInput}
+                        type="text" />
+                </div>
+                <br/>
+                <div>
+                    <Label basic color="orange" horizontal htmlFor="lastName">Last Name:</Label>
+                    <Field
+                        name="lastName"
+                        placeholder="Guerrero"
+                        component={renderInput}
+                        type="text" />
+                </div>
+                <br/>
+                <div>
+                    <Label basic color="orange" htmlFor="zipCode">Zip Code:</Label>
+                    <Field
+                        name="zipCode"
+                        placeholder="10009"
+                        component={renderInput}
+                        type="text" />
+                </div>
+                <br/>
+                <div>
+                    <Label basic color="orange" htmlFor="passwordConfirm">Password:</Label>
+                    <Field
+                        name="password"
+                        placeholder="******"
+                        component={renderInput}
+                        type="password" />
+                </div>
+                <br/>
+                <div>
+                    <Label basic color="orange" htmlFor="passwordConfirm">Confirm Password:</Label>
+                    <Field
+                        name="passwordConfirm"
+                        placeholder="******"
+                        component={renderInput}
+                        type="password" />
+                </div>
 
                 {this.renderAlert()}
-
-                <Button type="submit">Sign Up</Button>
-
-            </Form>
+                <br/>
+                <Button inverted color="green" type="submit">Sign Up!</Button>
+            </form>
         )
     }
+
 }
 
+function validate (formProps) {
+    const { email, password, passwordConfirm, firstName, lastName, zipCode } = formProps
+    const errors = {}
+
+    if (!email || email.trim() === "") {
+        errors.email = 'Please enter an email'
+    }
+
+    if (!password || password.trim() === "") {
+        errors.password = 'Please enter a password'
+    }
+
+    if (!passwordConfirm || passwordConfirm.trim() === "") {
+        errors.passwordConfirm = 'Please enter a password confirmation'
+    }
+
+    if (!firstName || firstName.trim() === "") {
+        errors.firstName = 'Please enter a first name'
+    }
+
+    if (!lastName || lastName.trim() === "") {
+        errors.lastName = 'Please enter a last name'
+    }
+    // regex checks both strings and number for 5 digits '56666' and 55666 are both valid which returns false because of "!"
+    if (!(/(^\d{5}$)|(^\d{5}-\d{4}$)/.test(zipCode))) {
+        errors.zipCode = 'Please enter a valid 5 digit zip code'
+    }
+
+    if (password !== passwordConfirm) {
+        errors.passwordConfirm = 'Passwords must match'
+    }
+
+    return errors
+}
 
 
 function mapStateToProps (state) {
     return { errorMessage: state.auth.error, authenticated: state.auth.authenticated }
 }
 
-export default connect(mapStateToProps, actions)(Signup)
+Signup = connect(mapStateToProps, actions)(Signup)
+
+export default reduxForm({
+    form: "signup",
+    validate
+}, mapStateToProps, actions)(Signup)
+
+
+
+
+// render () {
+//
+//     return (
+//         <Form onSubmit={this.handleFormSubmit.bind(this)}>
+//             <Form.Field>
+//                 <Input icon='user'
+//                        iconPosition='left' type='email' value={this.state.email} name="email" onChange={this.handleChange} placeholder="Email"/>
+//             </Form.Field>
+//
+//             <Form.Field>
+//                 <Input icon='lock'
+//                        iconPosition='left' value={this.state.password} name="password" type="password" onChange={this.handleChange} placeholder="Password"/>
+//             </Form.Field>
+//
+//             <Form.Field>
+//                 <Input icon='lock'
+//                        iconPosition='left' value={this.state.passwordConfirm} name="passwordConfirm" type="password" onChange={this.handleChange} placeholder="Password Confirmation"/>
+//             </Form.Field>
+//
+//             <Form.Field>
+//                 <Input icon='leaf'
+//                        iconPosition='left' value={this.state.firstName} name="firstName" onChange={this.handleChange} placeholder="First Name"/>
+//             </Form.Field>
+//
+//             <Form.Field>
+//                 <Input icon='leaf'
+//                        iconPosition='left' value={this.state.lastName} name="lastName" onChange={this.handleChange} placeholder="Last Name"/>
+//             </Form.Field>
+//
+//             <Form.Field>
+//                 <Input icon='map outline'
+//                        iconPosition='left' value={this.state.zipCode} name="zipCode" onChange={this.handleChange} placeholder="Zip Code"/>
+//             </Form.Field>
+//
+//             {this.renderAlert()}
+//
+//             <Button type="submit">Sign Up</Button>
+//
+//         </Form>
+//     )
+// }

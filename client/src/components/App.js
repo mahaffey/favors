@@ -4,14 +4,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import home from './features/home'
 import homeRouter from './features/router/homeRouter'
 import Signout from './auth/signout'
-// import NotFound from './nav/404'
 import Footer from './nav/footer'
 import FeatureRouter from "./features/router/authRouter"
 import RequireAuth from "./auth/require_auth"
 import { connect } from "react-redux"
+// import NotFound from './nav/404'
 
 
-class App extends Component {
+export default class App extends Component {
 
     render () {
         return (
@@ -37,8 +37,8 @@ class App extends Component {
 }
 
 // Probably unnecessary here for testing
-function mapStateToProps (state) {
-    return { authenticated: state.auth.authenticated }
-}
-
-export default connect(mapStateToProps, null)(App)
+// function mapStateToProps (state) {
+//     return { authenticated: state.auth.authenticated }
+// }
+//
+// export default connect(mapStateToProps, null)(App)

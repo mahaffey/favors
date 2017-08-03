@@ -2,6 +2,7 @@ import React from 'react'
 import {Route} from 'react-router-dom'
 import SigninModal from '../../auth/signinModal'
 import SignupModal from '../../auth/signupModal'
+import Signup from '../../auth/signup'
 import home from '../home'
 // import NotFound from '../../nav/404'
 

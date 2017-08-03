@@ -47,7 +47,7 @@ exports.signup = function (req, res, next) {
 
       // If a user with email does exist, return an error
       if (existingUser) {
-        return res.send({ errors: {msg: 'Email is in use', param: 'email', status: 422 }})
+        return res.send({ errors: {msg: 'Email is already in use', param: 'email', status: 422 }})
       }
 
       // If a user with email does NOT exist, create and save user record
@@ -69,7 +69,7 @@ exports.signup = function (req, res, next) {
         if (err) { return next(err) }
 
         // Respond to request indicating the user was created
-        res.json({ token: tokenForUser(user) })
+        res.json({ token: tokenForUser(user), user_id: user._id })
       })
     })}
 }

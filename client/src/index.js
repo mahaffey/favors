@@ -8,6 +8,7 @@ import reducers from "./reducers"
 import { AUTH_USER} from "./actions/userAuthentication/types"
 import { composeWithDevTools } from "redux-devtools-extension"
 import "./css/index.css"
+import "./css/App.css"
 import "./semantic/dist/semantic.min.css"
 import registerServiceWorker from "./registerServiceWorker"
 

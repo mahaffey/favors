@@ -23,6 +23,7 @@ export function signinUser ({ email, password }) {
                 return dispatch({ type: AUTH_USER })
             })
             .catch(() => {
+                // error is not an object (see below)
                 // If request is bad...
                 // - Show an error to the user
                 dispatch(authError("Bad Login Info"))
@@ -38,6 +39,7 @@ export function getUserInfoOnAuth(uid) {
                 payload: user.data
         }))
             .catch(() => {
+                // works here because we are not getting the error as an object
                 // If request is bad...
                 // - Show an error to the user
                 dispatch(authError("Bad User Info"))
@@ -49,15 +51,24 @@ export function signupUser ({ email, password, firstName, lastName, zipCode }) {
     return function (dispatch) {
         axios.post(`${ROOT_URL}/signup`, { email, password, firstName, lastName, zipCode })
             .then(response => {
-                console.log('here', response)
-                localStorage.setItem("token", response.data.token)
-                localStorage.setItem("uid", response.data.user_id)
-                dispatch({ type: AUTH_USER })
-
+                if (response.data.errors) {
+                    dispatch(authError(response.data.errors.msg))
+                } else {
+                    localStorage.setItem("token", response.data.token)
+                    localStorage.setItem("uid", response.data.user_id)
+                    return dispatch({ type: AUTH_USER })
+                }
             })
-            .catch(response => {
-                console.log(response.type, response.message, "POO", response)
-            })
+            // axios is not fetching a error object, known issue on the github issues.
+            // axios/node not sending back an error status will handle it above in the promise, to see what I mean try console.log(new Error()) in browser console
+            // .catch(response => {
+            //     console.log(response.type, response.message, "POO", response)
+            // })
+            // .catch(response => {
+            //     // If request is bad...
+            //     // - Show an error to the user
+            //     dispatch(authError(response.data.error))
+            // })
     }
 }
 

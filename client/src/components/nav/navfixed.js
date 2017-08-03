@@ -15,9 +15,11 @@ class FixedNav extends Component {
     }
 
     componentWillMount(){
-        if (this.props.authenticated)
+        debugger
+        if (this.props.authenticated && localStorage.uid)
             return this.props.getUserInfoOnAuth(localStorage.uid)
     }
+
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name})
 
@@ -109,7 +111,7 @@ class FixedNav extends Component {
                 style={{padding: '1.5em 0em' }}
                 vertical
             >
-            <Menu fixed="top" size='large' style={{backgroundColor: "orange"}}>
+            <Menu fixed="top" size='large' className="menu-color-orange" >
                 <Container>
                     {this.renderLinks(activeItem)}
                 </Container>

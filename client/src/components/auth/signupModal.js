@@ -23,7 +23,7 @@ export default class signupModal extends React.Component {
                 <Modal
                     open={this.state.modalOpen}
                     onClose={this.handleClose}
-                    size='fullscreen'
+                    size="tiny"
                     closeOnDimmerClick={false}
                 >
                     <Modal.Header>

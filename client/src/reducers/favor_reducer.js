@@ -12,7 +12,6 @@ import {
 export default function (state = {loading: false, favors: [], pic: '', form: {}, modal: false}, action) {
     switch (action.type) {
         case ADD_FAVOR:
-            debugger
             let favors = [action.payload, ...state.favors]
             return { ...state, favors: favors }
         case LOADING_FAVORS:

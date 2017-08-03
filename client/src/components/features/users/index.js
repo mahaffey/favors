@@ -36,7 +36,7 @@ class UserIndex extends React.Component {
                         style={{ fontSize: '3em', fontWeight: 'normal', marginBottom: 0, marginTop: '1em', color: 'ghostwhite' }}
                     />
                 </Container>
-                <Segment padded>
+                <Segment padded style={{backgroundColor: '#484e54'}}>
                     <Container fluid>
                         <Card.Group itemsPerRow={3}>
                             { Users }
