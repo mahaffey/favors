@@ -35,7 +35,6 @@ class Signin extends Component {
     }
 
     renderAlert () {
-        debugger
         const err = this.props.errorMessage
         if (err)
             return <Message error>Oops! {err}</Message>

@@ -13,7 +13,6 @@ class FavorIndex extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log('next', nextProps)
         if (nextProps.favors && nextProps.favors.length === 0)
             nextProps.getFavors()
     }
