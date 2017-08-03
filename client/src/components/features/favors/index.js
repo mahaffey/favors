@@ -27,8 +27,9 @@ class FavorIndex extends React.Component {
         let mapped
 
         if (this.props.favors) {
+            debugger
             mapped = this.props.favors.map((el, idx) => {
-                if (myFavors && el.posted_by._id !== localStorage.uid)   {
+                if (myFavors && el.posted_by._id && el.posted_by._id !== localStorage.uid)   {
                     return null
                 }
                 return <Favor key={idx} idx={idx} favor={el}/>
@@ -57,7 +58,7 @@ class FavorIndex extends React.Component {
 
                 <Button inverted color="orange" onClick={this.openModal.bind(this)}>New Favor</Button>
 
-                <Segment padded>
+                <Segment padded style={{backgroundColor: '#484e54'}}>
                     <Container fluid>
                         <Card.Group itemsPerRow={4}>
                             { this.mapFavors() }

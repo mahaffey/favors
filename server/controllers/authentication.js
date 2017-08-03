@@ -1,5 +1,6 @@
 const jwt = require('jwt-simple')
 const User = require('../models/user')
+const expressValidator = require('express-validator')
 
 function tokenForUser (user) {
   const timestamp = new Date().getTime()
@@ -29,38 +30,46 @@ exports.signup = function (req, res, next) {
 
 
   if (!email || !password) {
-    return res.status(422).send({ error: 'You must provide email and password'})
+    return res.send({ errors: {msg: 'You must provide email and password', param: 'email', status: 422}})
   }
 
-  // See if a user with the given email exists
-  User.findOne({ email: email }, function (err, existingUser) {
-    if (err) { return next(err) }
+  // check if email is a valid email (could be done on frontend...)
+  req.checkBody('email', 'You must enter a valid email').isEmail()
+  let errors = req.validationErrors()
 
-    // If a user with email does exist, return an error
-    if (existingUser) {
-      return res.status(422).send({ error: 'Email is in use' })
-    }
+  if (errors) {
+    return res.send({errors: errors[0]})
+  } else {
 
-    // If a user with email does NOT exist, create and save user record
-    const user = new User({
-      email: email,
-      firstName: firstName,
-      lastName: lastName,
-      password: password,
-      rep: rep,
-      wallet: wallet,
-      zip: zip,
-      radius: radius,
-      birth: birth,
-      avatar: avatar,
-      admin: admin
-    })
-    console.log('creating new user', user)
-    user.save(function (err) {
+    // See if a user with the given email exists
+    User.findOne({ email: email }, function (err, existingUser) {
       if (err) { return next(err) }
 
-      // Respond to request indicating the user was created
-      res.json({ token: tokenForUser(user) })
-    })
-  })
+      // If a user with email does exist, return an error
+      if (existingUser) {
+        return res.send({ errors: {msg: 'Email is in use', param: 'email', status: 422 }})
+      }
+
+      // If a user with email does NOT exist, create and save user record
+      const user = new User({
+        email: email,
+        firstName: firstName,
+        lastName: lastName,
+        password: password,
+        rep: rep,
+        wallet: wallet,
+        zip: zip,
+        radius: radius,
+        birth: birth,
+        avatar: avatar,
+        admin: admin
+      })
+      console.log('creating new user', user)
+      user.save(function (err) {
+        if (err) { return next(err) }
+
+        // Respond to request indicating the user was created
+        res.json({ token: tokenForUser(user) })
+      })
+    })}
 }

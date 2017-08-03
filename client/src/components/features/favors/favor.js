@@ -39,10 +39,9 @@ export default class Favor extends Component {
     render() {
         if (!this.props.is_completed) {
             return (
-                <Card raised>
-                    <Image src={this.image()} alt="bad image" onClick={this.redirect.bind(this)} />
+                <Card raised onClick={this.redirect.bind(this)}>
+                    <Image src={this.image()} alt="bad image"  />
                     <Card.Content>
-                        <Link to={this.favorLink()}>
                             <Card.Header>
                                 {this.category()}
                             </Card.Header>
@@ -54,7 +53,6 @@ export default class Favor extends Component {
                             <Card.Description>
                                 {this.props.favor.poster_is_offering_favor ? "Offering" : "Looking For"}: {this.props.favor.description}
                             </Card.Description>
-                        </Link>
                     </Card.Content>
                     <Card.Content extra>
                         <Link to={this.favorLink() }>

@@ -6,6 +6,8 @@ import userShowModal from '../users/userShowModal'
 import favorShowModal from '../favors/favorShowModal'
 import buyPoints from '../users/buyFavorPointsModal'
 import userIndex from '../users/index'
+// import NotFound from '../../nav/404'
+
 
 
 
@@ -18,10 +20,17 @@ const FeatureRouter = () => {
             <Route path='/favors/all' component={FavorIndex} />
             <Route path='/favors/show/:id' component={favorShowModal} />
             <Route path='/favors/users' component={userIndex} />
-            <Route path='/favors/users/:uid' component={userShowModal} />
             <Route exact path='/favors/users/me' component={userShowModal} />
             <Route exact path='/favors/users/me/buy_points' component={buyPoints} />
+            <Route path='/favors/users/:uid' component={userShowModal} />
             <Route path='/favors/my_favors' component={() => <FavorIndex me={true} />} />
+
+            {/*<Route path='/favors/all/*' component={NotFound} />*/}
+            {/*<Route path='/favors/show/*' component={NotFound} />*/}
+            {/*<Route path='/favors/users/*' component={NotFound} />*/}
+            {/*<Route path='/favors/my_favors/*' component={NotFound} />*/}
+
+
         </div>
     )
 }

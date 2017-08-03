@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import home from './features/home'
 import homeRouter from './features/router/homeRouter'
 import Signout from './auth/signout'
+// import NotFound from './nav/404'
 import Footer from './nav/footer'
 import FeatureRouter from "./features/router/authRouter"
 import RequireAuth from "./auth/require_auth"
@@ -25,7 +26,10 @@ class App extends Component {
 
                     <Route path="/favors" component={RequireAuth(FeatureRouter)} />
 
+                    {/*<Route path="*" component={NotFound} />*/}
+
                     <Footer/>
+
                 </div>
             </Router>
         )

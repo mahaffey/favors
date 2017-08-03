@@ -13,8 +13,7 @@ class favorShow extends React.Component {
         let urlSuffix = this.context.router.history.location.pathname.split('/')[3]
 
         if (urlSuffix === 'newest') {
-            let idx = this.props.favor.length - 1
-            return this.props.favor[idx]
+            return this.props.favor[0]
         }
 
         return (this.props.favor.filter((el) => {return el._id === urlSuffix}))[0]
