@@ -5,6 +5,7 @@ import {
     CLICK_PIC,
     FAVOR_ERROR,
     SAVE_FAVOR_FORM,
+    FAVOR_PENDING_VOLUNTEER,
     MODAL_STATE
     // DELETE_FAVOR
 } from "../actions/favors/types"
@@ -24,6 +25,11 @@ export default function (state = {loading: false, favors: [], pic: '', form: {},
             return { ...state, error: action.payload }
         case SAVE_FAVOR_FORM:
             return { ...state, form: action.payload }
+        case FAVOR_PENDING_VOLUNTEER:
+            // grab one favor, create new array, put this favor into the array instead of the other.
+            //let favor = //
+            let newFavorsArray =
+            return { ...state, favors: newFavorsArray }
         case MODAL_STATE:
             let newState = !state.modal
             return {...state, modal: newState}

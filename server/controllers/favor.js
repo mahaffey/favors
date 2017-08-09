@@ -67,22 +67,22 @@ exports.getFavor = function (req, res, next) {
         }
         else {
 
-        function volunteerInfo (favor) {
-            if (favor.volunteer === null) {
-                return null
-            } else {
-                return {
-                    _id: favor.volunteer._id,
-                    email: favor.volunteer.email,
-                    firstName: favor.volunteer.firstName,
-                    lastName: favor.volunteer.lastName,
-                    rep: favor.volunteer.rep,
-                    wallet: favor.volunteer.wallet,
-                    avatar: favor.volunteer.avatar,
-                    admin: favor.volunteer.admin,
-                    __v: favor.volunteer.__v}
+            function volunteerInfo (favor) {
+                if (favor.volunteer === null) {
+                    return null
+                } else {
+                    return {
+                        _id: favor.volunteer._id,
+                        email: favor.volunteer.email,
+                        firstName: favor.volunteer.firstName,
+                        lastName: favor.volunteer.lastName,
+                        rep: favor.volunteer.rep,
+                        wallet: favor.volunteer.wallet,
+                        avatar: favor.volunteer.avatar,
+                        admin: favor.volunteer.admin,
+                        __v: favor.volunteer.__v}
+                }
             }
-        }
 
             let protectedFavor = {
                 _id: favor._id,
@@ -116,8 +116,14 @@ exports.getFavor = function (req, res, next) {
     })
 }
 
-exports.requestToDoOrAskForFavor = function (res, req, next) {
-    Favor.findOne({_id: req.params.id})
+exports.pendingRequestForFavor = function (res, req, next) {
+    Favor.findOne({_id: req.params.id}).populate('posted_by').exec((err, favor) => {
+        if (err) {
+            throw err
+        }
+        else {
+            console.log(req.body)
+        }
 }
 
 exports.newFavor = function (req, res, next) {

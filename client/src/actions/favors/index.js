@@ -7,6 +7,9 @@ import {
     CLICK_PIC,
     SAVE_FAVOR_FORM,
     MODAL_STATE,
+    FAVOR_PENDING_VOLUNTEER,
+    //FAVOR_ACCEPT_VOLUNTEER,
+    //FAVOR_DENY_VOLUNTEER,
     // DELETE_FAVOR,
 } from "./types"
 
@@ -33,9 +36,9 @@ export function getFavors () {
     return function (dispatch) {
         dispatch({type: LOADING_FAVORS})
         return axios.get(ROOT_URL, {headers: {'Authorization': localStorage.token}})
-            .then(favors => dispatch({
+            .then(res => dispatch({
                 type: GET_FAVORS,
-                payload: favors.data
+                payload: res.data
                 }))
             .catch(res => {
                 dispatch(favorError(res.error))
@@ -43,6 +46,31 @@ export function getFavors () {
             )
     }
 }
+
+// add a button on new favor test and check server console.log
+// add new info to favor on backend
+// create reducer fucntion for front-end
+//then add accepting favor on the favor asker end
+export function volunteerForFavor ({favor_id}) {
+    let data = {
+        favor_id: favor_id,
+        volunteer_id: localStorage.uid
+    }
+
+    return function (dispatch) {
+        axios.patch(ROOT_URL + '/' + favor_id + '/pending', data, {headers: {'Authorization': localStorage.token}})
+            .then(res => dispatch({
+                type: FAVOR_PENDING_VOLUNTEER,
+                payload: res.data
+                }))
+            .catch(res => {
+                dispatch(favorError(res.error))
+                }
+            )
+    }
+}
+
+
 
 export function favorError (error) {
 
