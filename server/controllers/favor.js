@@ -116,6 +116,10 @@ exports.getFavor = function (req, res, next) {
     })
 }
 
+exports.requestToDoOrAskForFavor = function (res, req, next) {
+    Favor.findOne({_id: req.params.id})
+}
+
 exports.newFavor = function (req, res, next) {
     console.log(req.body)
     const posted_by = req.body.posted_by.id

@@ -16,7 +16,6 @@ module.exports = function (app) {
   app.post('/api/v1/signup', Authentication.signup)
   app.get('/api/v1/users', requireAuth, User.getUsers)
   app.get('/api/v1/users/:id', requireAuth, User.getUser)
-
   app.get('/api/v1/favors', requireAuth, Favor.getFavors)
   app.get('/api/v1/favors/:id', requireAuth, Favor.getFavor)
   app.post('/api/v1/favors/new', requireAuth, Favor.newFavor)

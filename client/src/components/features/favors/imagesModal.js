@@ -16,7 +16,7 @@ class ImagesModalTab extends Component {
                 "https://profur.ca/wp-content/uploads/2012/10/dog-walker-insurance.jpg",
                 "https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAWBAAAAJDdlYzM3NTU5LWY5ZTMtNDFmNC1iNGUzLTBlZDI2NjA1NmQxOA.jpg",
                 "https://s3-media2.fl.yelpcdn.com/bphoto/09E5_7ZfxH2WQoboQsMRZw/348s.jpg",
-                "http://img.bhs4.com/de/3/de3b2b0064314c3d5847a206729d474b673dd040_large.jpg",
+                "https://www.painscience.com/imgs/strong-massage-sq-m.jpg",
                 "https://cdn.lessons.com/profile-pro/57c84ee9fa4c965d2995cc94_profile.jpg",
                 "https://hellotars.com/wp-content/uploads/2017/05/technical-support.png",
                 "https://s3-media2.fl.yelpcdn.com/bphoto/SNBxT0mSx7_TkN7hK7M9YA/258s.jpg",

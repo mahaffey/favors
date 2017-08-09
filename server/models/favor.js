@@ -11,19 +11,24 @@ const favorSchema = new Schema({
 
     volunteer: {
         accepted: {
-            type: Boolean,
-            required: false
+            is_accepted: {
+                type: Boolean,
+                required: false},
+            accepted_user: {
+                type: Schema.Types.ObjectId,
+                required: false
+            }
         },
 
         pending: {
-            type: Boolean,
-            required: false
+            is_pending:{
+                type: Boolean,
+                required: false},
+            pending_user: {
+                type: Schema.Types.ObjectId,
+                required: false
+            }
         },
-
-        user: {
-            type: Schema.Types.ObjectId,
-            required: false
-        }
     },
 
     poster_is_offering_favor: {
