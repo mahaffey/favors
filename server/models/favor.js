@@ -24,6 +24,10 @@ const favorSchema = new Schema({
             is_pending:{
                 type: Boolean,
                 required: false},
+            pending_message: {
+                type: String,
+                required: false
+            },
             pending_user: {
                 type: Schema.Types.ObjectId,
                 required: false

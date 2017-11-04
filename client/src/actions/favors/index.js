@@ -51,14 +51,15 @@ export function getFavors () {
 // add new info to favor on backend
 // create reducer fucntion for front-end
 //then add accepting favor on the favor asker end
-export function volunteerForFavor ({favor_id}) {
+export function volunteerForFavor ({favor_id, message}) {
     let data = {
         favor_id: favor_id,
+        message: message,
         volunteer_id: localStorage.uid
     }
 
     return function (dispatch) {
-        axios.patch(ROOT_URL + '/' + favor_id + '/pending', data, {headers: {'Authorization': localStorage.token}})
+        axios.patch(ROOT_URL + '/' + favor_id + '/pending_request', data, {headers: {'Authorization': localStorage.token}})
             .then(res => dispatch({
                 type: FAVOR_PENDING_VOLUNTEER,
                 payload: res.data
@@ -73,7 +74,6 @@ export function volunteerForFavor ({favor_id}) {
 
 
 export function favorError (error) {
-
     return {
         type: FAVOR_ERROR,
         payload: error

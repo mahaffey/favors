@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Card, Image, Grid, Table, Label } from 'semantic-ui-react'
+import { Header, Card, Image, Grid, Table, Label, Accordion, Icon } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import * as actions from '../../../actions/favors/index'
@@ -102,11 +102,22 @@ class favorShow extends React.Component {
                                 </Header>
                                 <br></br>
                             </Card>
-
+                            {/*form for messaging goes here, logic so you cannot message yourself needed*/}
+                            <Accordion>
+                                <Accordion.Title>
+                                    <Icon name='dropdown' />
+                                    Interested?
+                                </Accordion.Title>
+                                <Accordion.Content>
+                                    forms fromf forms
+                                </Accordion.Content>
+                            </Accordion>
                         </Grid.Column>
+
                     </Grid.Row>
 
                 </Grid>
+
             </div>
         )}
 

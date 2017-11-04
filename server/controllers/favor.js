@@ -124,6 +124,7 @@ exports.pendingRequestForFavor = function (res, req, next) {
         else {
             console.log(req.body)
         }
+    })
 }
 
 exports.newFavor = function (req, res, next) {

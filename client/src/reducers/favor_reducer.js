@@ -26,9 +26,9 @@ export default function (state = {loading: false, favors: [], pic: '', form: {},
         case SAVE_FAVOR_FORM:
             return { ...state, form: action.payload }
         case FAVOR_PENDING_VOLUNTEER:
-            // grab one favor, create new array, put this favor into the array instead of the other.
-            //let favor = //
-            let newFavorsArray =
+            // create favors array with everything but changed favor, push in new favor, update state
+            let newFavorsArray = state.favors.filter(el => el._id !== action.payload._id)
+            newFavorsArray.push(action.payload)
             return { ...state, favors: newFavorsArray }
         case MODAL_STATE:
             let newState = !state.modal

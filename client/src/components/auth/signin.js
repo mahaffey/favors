@@ -1,7 +1,7 @@
-import React, { Component } from "react"
-import { connect } from "react-redux"
-import * as actions from "../../actions/userAuthentication/index"
-import PropTypes from "prop-types"
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import * as actions from '../../actions/userAuthentication/index'
+import PropTypes from 'prop-types'
 import { Message, Label } from 'semantic-ui-react'
 import { Form } from 'formsy-semantic-ui-react'
 
@@ -26,7 +26,7 @@ class Signin extends Component {
     componentWillUpdate(nextProps) {
         // console.log("updating signin", nextProps, this.context)
         if (nextProps.authenticated) {
-            this.context.router.history.push("/favors/all")
+            this.context.router.history.push('/favors/all')
         }
     }
 

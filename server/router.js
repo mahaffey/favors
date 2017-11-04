@@ -18,7 +18,7 @@ module.exports = function (app) {
   app.get('/api/v1/users/:id', requireAuth, User.getUser)
   app.get('/api/v1/favors', requireAuth, Favor.getFavors)
   app.get('/api/v1/favors/:id', requireAuth, Favor.getFavor)
-  app.patch('/api/v1/favors/:id/pending', requireAuth, Favor.pendingRequestForFavor)
+  app.patch('/api/v1/favors/:id/pending_request', requireAuth, Favor.pendingRequestForFavor)
   app.post('/api/v1/favors/new', requireAuth, Favor.newFavor)
 
 }
